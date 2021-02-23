@@ -1,105 +1,90 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Gridea</title>
-<link rel="shortcut icon" href="https://HugStars.github.io/favicon.ico?v=1614084637538">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" href="https://HugStars.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Gridea - Atom Feed" href="https://HugStars.github.io/atom.xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TITLE</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .loading,
+    .main {
+      height: 100vh;
+      width: 100vw;
+      background: #eee;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .landing-icon {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      margin: auto;
+    }
+
+    .landing-icon .icon {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .landing-icon .icon-1 {
+      background: #ffff0060;
+      border-radius: 100% 30% 50% 100% /40% 30% 80% 100%;
+      animation: spin-1 2s infinite;
+    }
+
+    .landing-icon .icon-2 {
+      background: #ff000060;
+      border-radius: 50% 100% 100% 30% /80% 100% 40% 30%;
+      animation: spin-2 2s infinite;
+    }
 
 
+    @keyframes spin-1 {
+      50% {
+        border-radius: 100%;
+        transform: scale(.5);
+      }
+    }
 
-    <meta name="description" content="温故而知新" />
-  </head>
-  <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://HugStars.github.io">
-  </a>
-  <h1 class="site-title">
-    Gridea
-  </h1>
-  <p class="site-description">
-    温故而知新
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="https://HugStars.github.io" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="https://HugStars.github.io/archives" class="menu">
-          项目
-        </a>
-      
-    
-      
-        <a href="https://HugStars.github.io/post/about" class="menu">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </div>
-</div>
+    @keyframes spin-2 {
+      50% {
+        border-radius: 100%;
+        transform: scale(.5);
+      }
+    }
 
-    
-        <div class="post-container">
-  
-    <article class="post">
-      <a href="https://HugStars.github.io/post/shou-ye/">
-        <h2 class="post-title">首页</h2>
-      </a>
-      <div class="post-info">
-        <span>
-          2021-02-23
-        </span>
-        <span>
-          0 min read
-        </span>
-        
-      </div>
-      
-      <div class="post-abstract">
-        
-      </div>
-    </article>
-  
-</div>
+    .landing-main {
+      height: 300px;
+    }
 
-    
-        <div class="pagination-container">
-  
-  
-</div>
 
-    
-        <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-  <a class="rss" href="https://HugStars.github.io/atom.xml" target="_blank">
-    <i class="ri-rss-line"></i> RSS
-  </a>
-</div>
+    .main {
+      display: none;
+    }
+  </style>
+</head>
 
-      </div>
+<body>
+  <div class="loading">
+    <div class="landing-icon">
+      <div class="icon icon-1"></div>
+      <div class="icon icon-2"></div>
     </div>
-  </body>
+    <div class="landing-main">
+      <p>dasd</p>
+    </div>
+  </div>
+  <div class="main"></div>
+</body>
+
 </html>
