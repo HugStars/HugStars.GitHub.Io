@@ -11,17 +11,13 @@
       padding: 0;
     }
 
-    .loading,
-    .main {
+    .loading {
       height: 100vh;
       width: 100vw;
       background: #eee;
       overflow: hidden;
     }
 
-    .loading {
-      /* display: none; */
-    }
 
     .landing-icon {
       position: relative;
@@ -97,26 +93,7 @@
       font-size: 26px;
       font-weight: 600;
     }
-
-    .main {
-      display: none;
-      overflow: hidden;
-    }
-
-    .show {
-      display: block;
-      animation: backgroundChange .5s;
-    }
-
-    @keyframes backgroundChange {
-      0% {
-        background: #f49494;
-      }
-
-      100% {
-        background: #eee;
-      }
-    }
+    
   </style>
 </head>
 
@@ -130,17 +107,11 @@
       <p>TITLE</p>
     </div>
   </div>
-  <div class="main">
-  </div>
 
   <script>
-    let loading = document.querySelector('.loading');
-    let main = document.querySelector('.main');
     setTimeout(() => {
-      loading.remove();
-      main.classList.add('show');
+      window.location.href = 'https://hugstars.github.io/home'
     }, 3000);
-
   </script>
 </body>
 

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TITLE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+            text-align: center;
+        }
+
+        main {
+            height: 100vh;
+            width: 100vw;
+            background: #eee;
+            overflow: hidden;
+            animation: backgroundChange .5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: grabbing;
+        }
+
+        @keyframes backgroundChange {
+            0% {
+                background: #f49494;
+            }
+
+            100% {
+                background: #eee;
+            }
+        }
+
+        h1 {
+            color: lightcoral;
+            font-size: 5em;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>HOMEPAGE</h1>
+    </main>
+</body>
+
+</html>
