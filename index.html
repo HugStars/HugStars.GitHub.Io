@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html><head>
+<html>
+
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TITLE</title>
@@ -15,6 +17,10 @@
       width: 100vw;
       background: #eee;
       overflow: hidden;
+    }
+
+    .loading {
+      /* display: none; */
     }
 
     .landing-icon {
@@ -33,43 +39,83 @@
     }
 
     .landing-icon .icon-1 {
-      background: #ffff0050;
+      background: #f49494;
       border-radius: 100%;
-      animation: spin-1 2s infinite;
-      transform: scale(.5);
+      animation: spin-1 3s;
+      transform: scale(25);
     }
 
     .landing-icon .icon-2 {
-      background: #ff000060;
+      background: #ffff0050;
       border-radius: 100%;
-      animation: spin-2 2s infinite;
-      transform: scale(1.25);
+      animation: spin-2 3s;
+      transform: scale(0);
     }
 
 
     @keyframes spin-1 {
-      50% {
+      0% {
+        background: #ff000060;
+        transform: scale(.5);
+      }
+
+      33% {
         transform: scale(1.25);
+      }
+
+      66% {
+        transform: scale(.5);
+      }
+
+      100% {
+        transform: scale(25);
+        background: #f49494;
       }
     }
 
     @keyframes spin-2 {
-      50% {
+      0% {
+        transform: scale(1.25);
+      }
+
+      33% {
         transform: scale(.5);
+      }
+
+      66% {
+        transform: scale(1.25);
+      }
+
+      80% {
+        transform: scale(0);
       }
     }
 
     .landing-title {
-      height: 100px;
       width: 100%;
       text-align: center;
-      margin: auto;
-      font-size: 25px;
+      font-size: 26px;
       font-weight: 600;
     }
 
     .main {
       display: none;
+      overflow: hidden;
+    }
+
+    .show {
+      display: block;
+      animation: backgroundChange .5s;
+    }
+
+    @keyframes backgroundChange {
+      0% {
+        background: #f49494;
+      }
+
+      100% {
+        background: #eee;
+      }
     }
   </style>
 </head>
@@ -84,12 +130,18 @@
       <p>TITLE</p>
     </div>
   </div>
-  <div class="main"></div>
+  <div class="main">
+  </div>
 
   <script>
     let loading = document.querySelector('.loading');
-    console.log(loading);
+    let main = document.querySelector('.main');
+    setTimeout(() => {
+      loading.remove();
+      main.classList.add('show');
+    }, 3000);
+
   </script>
+</body>
 
-
-</body></html>
+</html>
