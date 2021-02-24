@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html>
-
-<head>
+<html><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TITLE</title>
@@ -16,16 +14,14 @@
       height: 100vh;
       width: 100vw;
       background: #eee;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      overflow: hidden;
     }
 
     .landing-icon {
       position: relative;
       width: 100px;
       height: 100px;
-      margin: auto;
+      margin: 200px auto 100px;
     }
 
     .landing-icon .icon {
@@ -37,36 +33,40 @@
     }
 
     .landing-icon .icon-1 {
-      background: #ffff0060;
-      border-radius: 100% 30% 50% 100% /40% 30% 80% 100%;
+      background: #ffff0050;
+      border-radius: 100%;
       animation: spin-1 2s infinite;
+      transform: scale(.5);
     }
 
     .landing-icon .icon-2 {
       background: #ff000060;
-      border-radius: 50% 100% 100% 30% /80% 100% 40% 30%;
+      border-radius: 100%;
       animation: spin-2 2s infinite;
+      transform: scale(1.25);
     }
 
 
     @keyframes spin-1 {
       50% {
-        border-radius: 100%;
-        transform: scale(.5);
+        transform: scale(1.25);
       }
     }
 
     @keyframes spin-2 {
       50% {
-        border-radius: 100%;
         transform: scale(.5);
       }
     }
 
-    .landing-main {
-      height: 300px;
+    .landing-title {
+      height: 100px;
+      width: 100%;
+      text-align: center;
+      margin: auto;
+      font-size: 25px;
+      font-weight: 600;
     }
-
 
     .main {
       display: none;
@@ -80,11 +80,16 @@
       <div class="icon icon-1"></div>
       <div class="icon icon-2"></div>
     </div>
-    <div class="landing-main">
-      <p>dasd</p>
+    <div class="landing-title">
+      <p>TITLE</p>
     </div>
   </div>
   <div class="main"></div>
-</body>
 
-</html>
+  <script>
+    let loading = document.querySelector('.loading');
+    console.log(loading);
+  </script>
+
+
+</body></html>
