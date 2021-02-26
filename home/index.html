@@ -4,16 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../image/logo-48.png" type="image/x-icon">
     <title>TITLE</title>
-    <script>
-        var _hmt = _hmt || [];
-        (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?1e941498e8b6b417c24dc295810a88e3";
-        var s = document.getElementsByTagName("script")[0]; 
-        s.parentNode.insertBefore(hm, s);
-})();
-</script>
+    <script src="https://hm.baidu.com/hm.js?1e941498e8b6b417c24dc295810a88e3"></script>
 
     <style>
         * {
@@ -29,34 +22,181 @@
             width: 100vw;
             background: #eee;
             overflow: hidden;
-            animation: backgroundChange .5s;
+            animation: BackgroundChange .5s;
             display: flex;
-            justify-content: center;
+            /* 垂直布局 */
+            flex-direction: column;
+            /* 垂直居中 */
+            /* justify-content: center; */
+            /* 左右居中 */
             align-items: center;
-            cursor: grabbing;
         }
 
-        @keyframes backgroundChange {
-            0% {
+        @keyframes BackgroundChange {
+            from {
                 background: #f49494;
             }
 
-            100% {
+            to {
                 background: #eee;
             }
         }
 
+        svg {
+            width: 60px;
+            height: 60px;
+            padding: 5px;
+            margin-top: 100px;
+            border: 3px solid #f4ea2a;
+            border-radius: 50% 0 50%;
+        }
+
+
         h1 {
-            color: lightcoral;
-            font-size: 5em;
+            margin: 50px 0;
+            cursor: pointer;
+            animation: ColorChange .5s
+        }
+
+        @keyframes ColorChange {
+            from {
+                color: #f49494;
+            }
+
+            to {
+                color: #000;
+            }
+        }
+
+        h1:hover {
+            animation: BackColorChange .5s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes BackColorChange {
+            from {
+                color: #000;
+            }
+
+            to {
+                color: #f49494;
+            }
+        }
+
+        section {
+            font-size: 18px;
+            color: #222;
+            width: 80%;
+        }
+
+        nav {
+            margin: 50px;
+            width: 80%;
+            height: 150px;
+            box-sizing: initial;
+            padding: 0 10%;
+            box-sizing: border-box;
+            border-radius: 50px;
+            text-align: center;
+        }
+
+        .nav-item {
+            display: inline-block;
+            margin: 0 40px;
+            height: 40px;
+            line-height: 50px;
+            cursor: pointer;
+        }
+
+
+        .nav-item a {
+            padding: 0 5px;
+            border-bottom: 3px solid #fff;
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #000;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 40px;
+            color: #555;
+            font-size: 14px;
+        }
+
+        @media (max-width: 767px) {
+            svg {
+                border: 0;
+            }
+
+            .nav-item {
+                width: 150px;
+            }
+
+            footer {
+                bottom: 80px;
+            }
         }
     </style>
 </head>
 
 <body>
     <main>
-        <h1>HOMEPAGE</h1>
+        <svg t="1614216190335" class="icon" viewBox="0 0 1024 1024" version="1.1" p-id="14998" width="200" height="200">
+            <path
+                d="M282.624 659.456L40.96 421.888c-12.288-12.288-16.384-28.672-12.288-40.96 4.096-16.384 16.384-24.576 32.768-28.672l327.68-49.152-12.288 32.768s-73.728 188.416-90.112 282.624l-4.096 40.96z m45.056-303.104l-258.048 36.864 184.32 184.32c20.48-77.824 53.248-172.032 73.728-221.184zM782.336 954.368c-8.192 0-12.288 0-20.48-4.096l-294.912-155.648 32.768-16.384c90.112-49.152 237.568-172.032 237.568-176.128l28.672-24.576 57.344 331.776c0 12.288 0 24.576-8.192 32.768-12.288 8.192-20.48 12.288-32.768 12.288z m-229.376-159.744l229.376 122.88L737.28 655.36c-40.96 32.768-118.784 98.304-184.32 139.264z"
+                fill="#f4ea2a" p-id="14999"></path>
+            <path
+                d="M237.568 954.368c-12.288 0-24.576-4.096-32.768-16.384-8.192-8.192-12.288-20.48-8.192-32.768L245.76 614.4c16.384-98.304 90.112-282.624 94.208-290.816l131.072-270.336c12.288-28.672 61.44-28.672 73.728 0l126.976 258.048 282.624 40.96c16.384 4.096 28.672 12.288 32.768 28.672 4.096 16.384 0 32.768-12.288 40.96l-212.992 208.896c-8.192 4.096-151.552 131.072-245.76 180.224l-262.144 139.264c-4.096 4.096-8.192 4.096-16.384 4.096z m270.336-884.736l-131.072 266.24s-73.728 188.416-90.112 282.624l-49.152 294.912 262.144-139.264c90.112-49.152 237.568-172.032 237.568-176.128l208.896-208.896-303.104-45.056-135.168-274.432z"
+                fill="#f4ea2a" p-id="15000"></path>
+        </svg>
+
+        <h1>
+            HOMEPAGE
+        </h1>
+
+        <section>
+            We are all in the gutter，but some of us are looking at the stars。
+        </section>
+
+        <nav>
+            <div class="nav-item">
+                <a href="../program/">
+                    🚩Program
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="../Introduction">
+                    💬Introduction
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="../Other">
+                    💠Other
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="../About">
+                    💌About
+                </a>
+            </div>
+        </nav>
+
+        <footer>
+            ©This is the copyright information display.
+        </footer>
     </main>
+
+    <script>;
+        document.querySelector('h1').onclick = function () {
+            window.location.href = window.location.href;
+        }
+
+    </script>
 </body>
 
 </html>
