@@ -3,145 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <meta name="author" content="HugStars">
     <link rel="shortcut icon" href="../image/logo-48.png" type="image/x-icon">
     <title>TITLE</title>
     <script src="https://hm.baidu.com/hm.js?1e941498e8b6b417c24dc295810a88e3"></script>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            text-decoration: none;
-            list-style: none;
-            text-align: center;
-        }
-
-        main {
-            height: 100vh;
-            width: 100vw;
-            background: #eee;
-            overflow: hidden;
-            animation: BackgroundChange .5s;
-            display: flex;
-            /* 垂直布局 */
-            flex-direction: column;
-            /* 垂直居中 */
-            /* justify-content: center; */
-            /* 左右居中 */
-            align-items: center;
-        }
-
-        @keyframes BackgroundChange {
-            from {
-                background: #f49494;
-            }
-
-            to {
-                background: #eee;
-            }
-        }
-
-        svg {
-            width: 60px;
-            height: 60px;
-            padding: 5px;
-            margin-top: 100px;
-            border: 3px solid #f4ea2a;
-            border-radius: 50% 0 50%;
-        }
-
-
-        h1 {
-            margin: 50px 0;
-            cursor: pointer;
-            animation: ColorChange .5s
-        }
-
-        @keyframes ColorChange {
-            from {
-                color: #f49494;
-            }
-
-            to {
-                color: #000;
-            }
-        }
-
-        h1:hover {
-            animation: BackColorChange .5s;
-            animation-iteration-count: 1;
-            animation-fill-mode: forwards;
-        }
-
-        @keyframes BackColorChange {
-            from {
-                color: #000;
-            }
-
-            to {
-                color: #f49494;
-            }
-        }
-
-        section {
-            font-size: 18px;
-            color: #222;
-            width: 80%;
-        }
-
-        nav {
-            margin: 50px;
-            width: 80%;
-            height: 150px;
-            box-sizing: initial;
-            padding: 0 10%;
-            box-sizing: border-box;
-            border-radius: 50px;
-            text-align: center;
-        }
-
-        .nav-item {
-            display: inline-block;
-            margin: 0 40px;
-            height: 40px;
-            line-height: 50px;
-            cursor: pointer;
-        }
-
-
-        .nav-item a {
-            padding: 0 5px;
-            border-bottom: 3px solid #fff;
-            font-size: 1.2em;
-            font-weight: 600;
-            color: #000;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-
-        footer {
-            position: fixed;
-            bottom: 40px;
-            color: #555;
-            font-size: 14px;
-        }
-
-        @media (max-width: 767px) {
-            svg {
-                border: 0;
-            }
-
-            .nav-item {
-                width: 150px;
-            }
-
-            footer {
-                bottom: 80px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../css/home.css">
 </head>
 
 <body>
@@ -155,7 +22,7 @@
                 fill="#f4ea2a" p-id="15000"></path>
         </svg>
 
-        <h1>
+        <h1 id="title">
             HOMEPAGE
         </h1>
 
@@ -165,24 +32,16 @@
 
         <nav>
             <div class="nav-item">
-                <a href="../program/">
-                    🚩Program
-                </a>
+                <a href="../program">🚩Program</a>
             </div>
             <div class="nav-item">
-                <a href="../introduction">
-                    💬Introduction
-                </a>
+                <a href="../introd">💬Introd</a>
             </div>
             <div class="nav-item">
-                <a href="../other">
-                    💠Other
-                </a>
+                <a href="../other">💠Other</a>
             </div>
             <div class="nav-item">
-                <a href="../about">
-                    💌About
-                </a>
+                <a href="../about">💌About</a>
             </div>
         </nav>
 
@@ -191,12 +50,7 @@
         </footer>
     </main>
 
-    <script>;
-        document.querySelector('h1').onclick = function () {
-            window.location.href = window.location.href;
-        }
-
-    </script>
+    <script src="../javascript/refresh.js"></script>
 </body>
 
 </html>

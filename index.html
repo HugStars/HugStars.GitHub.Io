@@ -3,98 +3,12 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+  <meta name="author" content="HugStars">
+  <link rel="shortcut icon" href="./image/logo-48.png" type="image/x-icon">
   <title>TITLE</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
-
-    .loading {
-      height: 100vh;
-      width: 100vw;
-      background: #eee;
-      overflow: hidden;
-    }
-
-
-    .landing-icon {
-      position: relative;
-      width: 100px;
-      height: 100px;
-      margin: 200px auto 100px;
-    }
-
-    .landing-icon .icon {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-    .landing-icon .icon-1 {
-      background: #f49494;
-      border-radius: 100%;
-      animation: spin-1 3s;
-      transform: scale(25);
-    }
-
-    .landing-icon .icon-2 {
-      background: #ffff0050;
-      border-radius: 100%;
-      animation: spin-2 3s;
-      transform: scale(0);
-    }
-
-
-    @keyframes spin-1 {
-      0% {
-        background: #ff000060;
-        transform: scale(.5);
-      }
-
-      33% {
-        transform: scale(1.25);
-      }
-
-      66% {
-        transform: scale(.5);
-      }
-
-      100% {
-        transform: scale(25);
-        background: #f49494;
-      }
-    }
-
-    @keyframes spin-2 {
-      0% {
-        transform: scale(1.25);
-      }
-
-      33% {
-        transform: scale(.5);
-      }
-
-      66% {
-        transform: scale(1.25);
-      }
-
-      80% {
-        transform: scale(0);
-      }
-    }
-
-    .landing-title {
-      width: 100%;
-      text-align: center;
-      font-size: 26px;
-      font-weight: 600;
-    }
-    
-  </style>
+  <link rel="stylesheet" href="./css/loading.css">
+  
 </head>
 
 <body>
@@ -110,7 +24,7 @@
 
   <script>
     setTimeout(() => {
-      window.location.href = 'https://hugstars.github.io/home'
+      window.location.href = './home/index.html'
     }, 3000);
   </script>
 </body>

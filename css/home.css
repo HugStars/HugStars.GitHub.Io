@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    text-decoration: none
+}
+
+:root {
+    --color1: #eeeeee;
+    --color2: #f49494;
+    --color3: #f4ea2a;
+    --coloe4: #222222;
+    --color5: #555555;
+}
+
+main {
+    display: flex;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background: var(--color1);
+    animation: BackgroundChange .5s;
+    flex-direction: column;
+    align-items: center
+}
+
+@keyframes BackgroundChange {
+    0% {
+        background: var(--color2)
+    }
+    to {
+        background: var(--color1)
+    }
+}
+
+svg {
+    margin-top: 100px;
+    padding: 5px;
+    width: 60px;
+    height: 60px;
+    border: 3px solid var(--color3);
+    border-radius: 50% 0 50%
+}
+
+h1 {
+    margin: 50px 0;
+    cursor: pointer;
+    animation: ColorChange .5s
+}
+
+@keyframes ColorChange {
+    0% {
+        color: var(--color2)
+    }
+    to {
+        color: var(--coloe4)
+    }
+}
+
+h1:hover {
+    animation: BackColorChange .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards
+}
+
+@keyframes BackColorChange {
+    0% {
+        color: var(--coloe4)
+    }
+    to {
+        color: var(--color2)
+    }
+}
+
+section {
+    width: 80%;
+    color: #222;
+    font-size: 18px
+}
+
+nav {
+    box-sizing: initial;
+    box-sizing: border-box;
+    margin: 50px;
+    padding: 0 10%;
+    width: 80%;
+    height: 150px;
+    border-radius: 50px;
+    text-align: center
+}
+
+.nav-item {
+    display: inline-block;
+    margin: 0 40px;
+    height: 40px;
+    line-height: 50px;
+    cursor: pointer
+}
+
+.nav-item a {
+    overflow: hidden;
+    padding: 0 5px;
+    border-bottom: 3px solid #ffffff;
+    color: var(--coloe4);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 1.2em
+}
+
+footer {
+    position: fixed;
+    bottom: 40px;
+    color: var(--color5);
+    font-size: 14px
+}
+
+@media (max-width:767px) {
+    svg {
+        border: 0
+    }
+    .nav-item {
+        width: 150px
+    }
+}
