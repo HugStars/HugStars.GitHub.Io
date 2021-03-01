@@ -106,7 +106,12 @@ nav {
     text-overflow: ellipsis;
     white-space: nowrap;
     font-weight: 600;
-    font-size: 1.2em
+    font-size: 1.2em;
+    animation: ColorChange .5s
+}
+
+.nav-item a:hover {
+    animation: BackColorChange .5s
 }
 
 footer {
