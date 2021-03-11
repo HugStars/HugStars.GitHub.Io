@@ -3,7 +3,9 @@
     padding: 0;
     list-style: none;
     text-align: center;
-    text-decoration: none
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	user-select: none
 }
 
 :root {
@@ -14,11 +16,13 @@
     --color5: #555555;
 }
 
+
 main {
     display: flex;
     overflow: hidden;
     width: 100vw;
     height: 100vh;
+    min-width: 330px;
     background: var(--color1);
     animation: BackgroundChange .5s;
     flex-direction: column;
@@ -119,6 +123,12 @@ footer {
     bottom: 40px;
     color: var(--color5);
     font-size: 14px
+}
+
+@media (max-width:1234px){
+    nav{
+        max-width: 740px !important;
+    }
 }
 
 @media (max-width:767px) {
