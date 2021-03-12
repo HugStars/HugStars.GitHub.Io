@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    user-select: none
+}
+
+:root {
+    --color1: #eee;
+    --color2: #f49494;
+    --color3: #f4ea2a;
+    --coloe4: #222;
+    --color5: #555;
+    --color6: #fff;
+    --color7: #e5e5e5
+}
+
+body {
+    position: relative;
+    display: flex;
+    width: 1140px;
+    min-width: 330px;
+    background: var(--color1);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+footer, header, main {
+    width: 100%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+    width: 100%;
+    /* min-width: 1140px; */
+    height: 80px;
+    background: var(--color6);
+    box-shadow: 0 1px 5px var(--color7);
+    line-height: 80px
+}
+
+header:after {
+    position: absolute;
+    top: 73px;
+    left: 0;
+    width: 200%;
+    height: 1px;
+    background: linear-gradient(90deg, red, #ff7f00, #ff0, #0f0, #0ff, #00f, #8b00ff, red, #ff7f00, #ff0, #0f0, #0ff, #00f, #8b00ff);
+    content: "";
+    animation: ran 3s linear infinite;
+    animation-direction: alternate
+}
+
+header div {
+    width: 1140px;
+    margin: auto;
+    height: 100%;
+}
+
+h1 {
+    line-height: 75px;
+    cursor: pointer;
+    animation: ColorChange .5s
+}
+
+@keyframes ColorChange {
+    0% {
+        color: var(--color2)
+    }
+    to {
+        color: var(--coloe4)
+    }
+}
+
+h1:hover {
+    animation: BackColorChange .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards
+}
+
+@keyframes BackColorChange {
+    0% {
+        color: var(--coloe4)
+    }
+    to {
+        color: var(--color2)
+    }
+}
+
+@keyframes ran {
+    0% {
+        left: 0
+    }
+    to {
+        left: -100%
+    }
+}
+
+header h1 {
+    float: left;
+    text-align: left;
+    cursor: pointer
+}
+
+nav {
+    margin-top: 140px;
+    padding: 20px 20px 30px;
+    width: 100%;
+    border-radius: 20px;
+    background: var(--color6);
+    box-shadow: 6px 6px 12px #b5b5b5, -6px -6px 12px #fff
+}
+
+nav h2, nav section {
+    text-align: left;
+}
+
+main {
+    margin-top: 80px;
+    font-size: 0
+}
+
+.main-item {
+    width: 100%;
+}
+
+.main-item+.main-item {
+    margin-top: 60px;
+}
+
+.main-item div {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    /* height: 100%; */
+    padding: 30px 30px 50px;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.main-item:nth-child(odd) div:nth-child(1) {
+    border-radius: 20px;
+    background: var(--color6);
+    box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #fff
+}
+
+.main-item:nth-child(2n) div:nth-child(2) {
+    border-radius: 20px;
+    background: var(--color7);
+    box-shadow: inset 20px 20px 60px #c3c3c3, inset -20px -20px 60px #fff
+}
+
+.main-item a {
+    display: block;
+    color: var(--coloe4);
+    font-size: 25px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    animation: ColorChange .5s;
+}
+
+.main-item a:hover {
+    animation: BackColorChange .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards
+}
+
+.main-item section {
+    font-size: 16px;
+    text-align: left;
+}
+
+.main-item p {
+    width: 100%;
+    font-size: 12px;
+    text-align: left;
+    position: absolute;
+    bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.main-item p .html, .main-item p .css, .main-item p .js, .main-item .time {
+    padding: 2px 5px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.main-item p .html {
+    background: #FFFFAA;
+}
+
+.main-item p .css {
+    background: #AAFFFF;
+}
+
+.main-item p .js {
+    background: #FFAAAA;
+}
+
+.main-item .time {
+    float: right;
+    margin-right: 50px;
+}
+
+footer {
+    margin: 50px 0;
+    color: var(--color5);
+    font-size: 14px
+}
+
+@media (max-width:1140px) {
+    body {
+        width: 100%;
+    }
+    header {
+        width: 100%;
+    }
+    header div {
+        width: 100%;
+    }
+    nav {
+        width: 90%;
+    }
+    main .main-item div {
+        display: block;
+        width: 90%;
+        margin: auto;
+    }
+    .main-item div:nth-child(1) {
+        border-radius: 20px;
+        background: var(--color6);
+        box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #fff
+    }
+    .main-item div:nth-child(2) {
+        border-radius: 20px;
+        background: var(--color7);
+        box-shadow: inset 20px 20px 60px #c3c3c3, inset -20px -20px 60px #fff
+    }
+
+
+    .main-item+.main-item {
+        margin-top: 30px;
+    }
+
+    .main-item div+div {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width:767px) {}
