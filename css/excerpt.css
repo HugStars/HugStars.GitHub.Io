@@ -224,6 +224,9 @@ footer {
 }
 
 @media (max-width:1140px) {
+    header{
+        display:none
+    }
     body {
         width: 100%;
     }
