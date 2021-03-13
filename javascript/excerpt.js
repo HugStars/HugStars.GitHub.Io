@@ -30,7 +30,7 @@ function callBackData(data) {
     }
     main.innerHTML = str;
 
-    
 }
-
+let iframe = document.querySelector('iframe');
+iframe.remove();
 document.getElementById("script").remove();
