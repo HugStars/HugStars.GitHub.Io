@@ -2,7 +2,8 @@ let site = window.location.href;
 site = site.split(/git/i)[1].split('.')[0].toLowerCase();
 console.log(site);
 let xhr = new XMLHttpRequest();
-xhr.open("GET", `https://hugstars.git${site}.io/data/baidu.json`);
+// xhr.open("GET", `https://hugstars.git${site}.io/data/baidu.json`);
+xhr.open("GET", `../data/baidu.json`);
 xhr.send();
 xhr.onreadystatechange = function () {
     if (xhr.readyState == 4 && xhr.status == 200) {

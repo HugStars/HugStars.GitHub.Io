@@ -28,9 +28,7 @@ function callBackData(data) {
         }
         str += `<span class="time">${data.time}</span></p></div>`
     }
-    main.innerHTML = str;
+    main.innerHTML += str;
 
 }
-let iframe = document.querySelector('iframe');
-iframe.remove();
 document.getElementById("script").remove();
