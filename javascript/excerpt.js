@@ -9,7 +9,7 @@ xhr1.onreadystatechange = function () {
 
 function callBackData(data) {
     let nav = document.querySelector('nav');
-    nav.innerHTML = `<h2>${data[0].h2}</h2><section>${data[0].section}</section>`
+    nav.innerHTML += `<h2>${data[0].h2}</h2><section>${data[0].section}</section>`
     let main = document.querySelector('main');
     let str = '';
     for (let i = 1; i < data.length; i++) {
