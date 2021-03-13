@@ -6,7 +6,6 @@
     text-align: center;
     text-decoration: none;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-    box-sizing: border-box;
     user-select: none
 }
 
@@ -21,57 +20,52 @@
 }
 
 body {
-    position: relative;
     display: flex;
+    margin: auto;
     width: 1140px;
     min-width: 330px;
     background: var(--color1);
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin: auto;
+    align-items: center
 }
 
 footer, header, main {
-    width: 100%;
+    width: 100%
 }
 
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    overflow: hidden;
-    width: 100%;
-    /* min-width: 1140px; */
+    margin: 10px auto;
+    padding: 0 10px;
     height: 80px;
-    background: var(--color6);
-    box-shadow: 0 1px 5px var(--color7);
     line-height: 80px
 }
 
-header:after {
-    position: absolute;
-    top: 73px;
-    left: 0;
-    width: 200%;
-    height: 1px;
-    background: linear-gradient(90deg, red, #ff7f00, #ff0, #0f0, #0ff, #00f, #8b00ff, red, #ff7f00, #ff0, #0f0, #0ff, #00f, #8b00ff);
-    content: "";
-    animation: ran 3s linear infinite;
-    animation-direction: alternate
-}
-
-header div {
-    width: 1140px;
-    margin: auto;
-    height: 100%;
+h1, header {
+    background: var(--color1)
 }
 
 h1 {
-    line-height: 75px;
+    position: relative;
+    z-index: 10;
+    float: left;
+    overflow: hidden;
+    padding: 0 5px;
+    height: 70px;
+    text-align: left;
     cursor: pointer;
     animation: ColorChange .5s
+}
+
+h1:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 400%;
+    height: 1px;
+    background: linear-gradient(90deg, red, #ff7f00, #ff0, #0f0, #0ff, #00f, #8b00ff, red, #ff7f00, #ff0, #0f0, #0ff, #00f, #8b00ff);
+    content: "";
+    animation: ran 1s linear infinite
 }
 
 @keyframes ColorChange {
@@ -103,27 +97,21 @@ h1:hover {
         left: 0
     }
     to {
-        left: -100%
+        left: -200%
     }
 }
 
-header h1 {
-    float: left;
-    text-align: left;
-    cursor: pointer
-}
-
 nav {
-    margin-top: 140px;
+    margin-top: 40px;
     padding: 20px 20px 30px;
     width: 100%;
     border-radius: 20px;
     background: var(--color6);
-    box-shadow: 6px 6px 12px #b5b5b5, -6px -6px 12px #fff
+    background: #eee
 }
 
 nav h2, nav section {
-    text-align: left;
+    text-align: left
 }
 
 main {
@@ -132,44 +120,31 @@ main {
 }
 
 .main-item {
-    width: 100%;
+    width: 100%
 }
 
 .main-item+.main-item {
-    margin-top: 60px;
+    margin-top: 60px
 }
 
 .main-item div {
     position: relative;
     display: inline-block;
-    width: 50%;
-    /* height: 100%; */
-    padding: 30px 30px 50px;
-    vertical-align: middle;
     overflow: hidden;
-}
-
-.main-item:nth-child(odd) div:nth-child(1) {
-    border-radius: 20px;
-    background: var(--color6);
-    box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #fff
-}
-
-.main-item:nth-child(2n) div:nth-child(2) {
-    border-radius: 20px;
-    background: var(--color7);
-    box-shadow: inset 20px 20px 60px #c3c3c3, inset -20px -20px 60px #fff
+    padding: 30px 30px 50px;
+    width: 50%;
+    vertical-align: middle
 }
 
 .main-item a {
     display: block;
-    color: var(--coloe4);
-    font-size: 25px;
-    text-align: left;
     overflow: hidden;
+    color: var(--coloe4);
+    text-align: left;
     text-overflow: ellipsis;
     white-space: nowrap;
-    animation: ColorChange .5s;
+    font-size: 22px;
+    animation: ColorChange .5s
 }
 
 .main-item a:hover {
@@ -179,42 +154,49 @@ main {
 }
 
 .main-item section {
-    font-size: 16px;
     text-align: left;
+    font-size: 16px
 }
 
 .main-item p {
-    width: 100%;
-    font-size: 12px;
-    text-align: left;
     position: absolute;
     bottom: 10px;
-    overflow: hidden;
+    width: 90%;
+    text-align: left;
     text-overflow: ellipsis;
     white-space: nowrap;
+    font-size: 12px
 }
 
-.main-item p .html, .main-item p .css, .main-item p .js, .main-item .time {
+.main-item .time, .main-item p .css, .main-item p .html, .main-item p .js {
+    margin-right: 5px;
     padding: 2px 5px;
     border-radius: 5px;
-    margin-right: 5px;
+    font-weight: 600;
 }
 
 .main-item p .html {
-    background: #FFFFAA;
+    background: #ffffaa90; 
+    border: 1px solid #ffffaa;
+    box-shadow: 2px 2px 3px #cccc88, -2px -2px 5px #ffffcc;
 }
 
 .main-item p .css {
-    background: #AAFFFF;
+    background: #aaffff90;
+    border: 1px solid #aff;
+    box-shadow: 2px 2px 3px #88cccc, -2px -2px 5px #ccffff;
 }
 
 .main-item p .js {
-    background: #FFAAAA;
+    background: #ffaaaa90;
+    border: 1px solid #faa;
+    box-shadow: 2px 2px 3px #cc8888, -2px -2px 5px #ffcccc;
 }
 
 .main-item .time {
     float: right;
-    margin-right: 50px;
+    /* background: white; */
+    box-shadow: 2px 2px 3px #bebebe, -2px -2px 5px #ffffff;
 }
 
 footer {
@@ -223,46 +205,77 @@ footer {
     font-size: 14px
 }
 
-@media (max-width:1140px) {
-    header{
-        display:none
-    }
-    body {
-        width: 100%;
-    }
-    header {
-        width: 100%;
-    }
-    header div {
-        width: 100%;
-    }
-    nav {
-        width: 90%;
-    }
-    main .main-item div {
-        display: block;
-        width: 90%;
-        margin: auto;
-    }
-    .main-item div:nth-child(1) {
-        border-radius: 20px;
-        background: var(--color6);
-        box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #fff
-    }
-    .main-item div:nth-child(2) {
-        border-radius: 20px;
-        background: var(--color7);
-        box-shadow: inset 20px 20px 60px #c3c3c3, inset -20px -20px 60px #fff
-    }
+footer a {
+    color: var(--color5);
+    animation: textShadow 5s infinite linear;
+    animation-direction: alternate;
+}
 
-
-    .main-item+.main-item {
-        margin-top: 30px;
+@keyframes textShadow {
+    from {
+        text-shadow: 0px 0px 5px red;
     }
-
-    .main-item div+div {
-        margin-top: 30px;
+    25% {
+        text-shadow: 0px 0px 5px#ff7f00,
+    }
+    50% {
+        text-shadow: 0px 0px 5px #00ff00;
+    }
+    75% {
+        text-shadow: 0px 0px 5px, #0000ff;
+    }
+    to {
+        text-shadow: 0px 0px 5px #8b00ff;
     }
 }
 
-@media (max-width:767px) {}
+@media (min-width:1140px) {
+    .main-item:nth-child(odd) div:first-child {
+        border-radius: 20px;
+        background: var(--color6);
+        background: #eee;
+        box-shadow: 5px 5px 5px #a7a7a7, -5px -5px 5px #fff
+    }
+    .main-item:nth-child(2n) div:nth-child(2) {
+        border-radius: 20px;
+        background: var(--color7);
+        background: #eee;
+        box-shadow: inset 20px 20px 60px #c3c3c3, inset -20px -20px 60px #fff;
+        box-shadow: 20px 20px 60px #c3c3c3, -20px -20px 60px #fff;
+        box-shadow: inset 5px 5px 5px #a7a7a7, inset -5px -5px 5px #fff
+    }
+}
+
+@media (max-width:1140px) {
+    body, header {
+        width: 100%
+    }
+    header h1 {
+        font-size: 23px;
+    }
+    nav {
+        width: 90%
+    }
+    main .main-item div {
+        display: block;
+        margin: auto;
+        width: 90%
+    }
+    .main-item:nth-child(odd) div:first-child {
+        border-radius: 20px;
+        background: var(--color6);
+        background: #eee;
+        box-shadow: 5px 5px 5px #a7a7a7, -5px -5px 5px #fff
+    }
+    .main-item:nth-child(2n) div:first-child {
+        border-radius: 20px;
+        background: var(--color7);
+        background: #eee;
+        box-shadow: inset 20px 20px 60px #c3c3c3, inset -20px -20px 60px #fff;
+        box-shadow: 20px 20px 60px #c3c3c3, -20px -20px 60px #fff;
+        box-shadow: inset 5px 5px 5px #a7a7a7, inset -5px -5px 5px #fff
+    }
+    .main-item+.main-item, .main-item div+div {
+        margin-top: 30px
+    }
+}
