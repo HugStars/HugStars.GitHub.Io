@@ -1,6 +1,5 @@
 let site = window.location.href;
 site = site.split(/git/i)[1].split('/')[0].toLowerCase();
-console.log(site);
 
 let xhr = new XMLHttpRequest();
 xhr.open("GET", `https://hugstars.git${site}.io/data/baidu.json`);
@@ -12,13 +11,11 @@ xhr.onreadystatechange = function () {
 }
 
 function callBack(data) {
-    console.log(data);
     if (site == 'hub') {
         site = data.github;
     } else {
         site = data.gitee;
     }
-
     (function () {
         var hm = document.createElement("script");
         hm.src = site;

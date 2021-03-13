@@ -7,7 +7,7 @@
     <meta name="author" content="HugStars">
     <link rel="shortcut icon" href="../image/logo-48.png" type="image/x-icon">
     <title>🌈Excerpt</title>
-    <!-- <script src="../javascript/addbaidu.js"></script> -->
+    <script src="../javascript/addbaidu.js"></script>
     <link rel="stylesheet" href="../css/excerpt.css">
 
 
@@ -18,97 +18,21 @@
     <header>
         <h1 id="title">🌈Excerpt</h1>
     </header>
-
     <nav>
-        <h2>TITLE：</h2>
-        <section>
-            🌈Excerpt,🌈Excerpt,🌈Excerpt,🌈Excerpt,🌈Excerpt,🌈Excerpt,🌈Excerpt.<br>&emsp;&emsp;🌈Excerpt,🌈Excerpt,🌈Excerpt,🌈Excerpt,🌈Excerpt,🌈Excerpt,🌈Excerpt,🌈Excerpt,🌈Excerpt,🌈Excerpt,🌈Excerpt,🌈Excerpt,🌈Excerpt,🌈Excerpt.
-        </section>
     </nav>
-
-
     <main>
-        <div class="main-item">
-            <div>
-                <a href=""> 链接 </a>
-                <section>
-                    &emsp;&emsp;jianjie<br>&emsp;&emsp;jianj
-                </section>
-                <p><span class="html">HTML</span><span class="css">CSS</span><span class="js">JavaScript</span><span
-                        class="time">2021.01.01</span></p>
-            </div>
-            <div>
-                <a>titletitletitletitletitletitletitletitletitletitletitletitletitle </a>
-                <section>
-                    &emsp;&emsp;jianjie<br>&emsp;&emsp;jianj
-                </section>
-                <p><span class="html">HTML</span><span class="css">CSS</span><span class="time">2021.01.01</span><span
-                        class="js">JavaScript</span></p>
 
-            </div>
-        </div>
-        <div class="main-item">
-            <div>
-                <a href="">titletitletitletitletitletitletitletitletitletitletitletitletitle </a>
-                <section>
-                    &emsp;&emsp;jianjie<br>&emsp;&emsp;jianj
-                    &emsp;&emsp;jianjie<br>&emsp;&emsp;jianj
-                    &emsp;&emsp;jianjie<br>&emsp;&emsp;jianj
-                    &emsp;&emsp;jianjie<br>&emsp;&emsp;jianj
-                    &emsp;&emsp;jianjie<br>&emsp;&emsp;jianj
-                    &emsp;&emsp;jianjie<br>&emsp;&emsp;jianj
-                    &emsp;&emsp;jianjie<br>&emsp;&emsp;jianj
-                </section>
-                <p><span class="time">2021.01.01</span></p>
-            </div>
-            <div>
-                <a href="">titletitletitletitletitletitletitletitletitletitletitletitletitle </a>
-                <section>
-                    &emsp;&emsp;jianjie<br>&emsp;&emsp;jianj
-                    &emsp;&emsp;jianjie<br>&emsp;&emsp;jianj
-                    &emsp;&emsp;jianjie<br>&emsp;&emsp;jianj
-                </section>
-            </div>
-        </div>
-        <div class="main-item">
-            <div>
-                <a href="">title </a>
-                <section>&emsp;&emsp;jianj</section>
-            </div>
-            <div>
-                <a href=""> </a>
-                <section>&emsp;&emsp;jianjie</section>
-            </div>
-        </div>
-
+        <div class="main-item"></div>
+        <div class="main-item"></div>
+        <div class="main-item"></div>
     </main>
-
-    <footer>
-        © 2021 by <a href="">HugStars</a>
-    </footer>
-
-
-    <script>
-        let xhr1 = new XMLHttpRequest();
-        xhr1.open('GET', 'https://hugstars.github.io/data/excerpt.json');
-        xhr1.send();
-        xhr1.onreadystatechange = function () {
-            if (xhr1.readyState == 4 && xhr1.status == 200) {
-                callBack(JSON.parse(xhr1.responseText));
-            }
-        }
-
-        function callBack(data) {
-            let nav = document.querySelector('nav');
-            nav.innerHTML = `<h2>${data[0].h2}</h2><section>${data[0].section}</section>`
-
-            for (let i = 1; i < data.length; i++) {
-                console.log(data[i]);
-            }
-        }
-    </script>
-
+    <footer>© 2021 by <a href="../home.html">HugStars</a></footer>
     <script src="../javascript/refresh.js"></script>
+    <script id="script" src="../javascript/excerpt.js"></script>
+    <!-- <script>
+   
+        }
+    </script> -->
 </body>
 
 </html>
