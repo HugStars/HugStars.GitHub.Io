@@ -24,7 +24,7 @@ function callBackData(data) {
             str += `<div class="main-item"><a href="${href}">${title}</a><section>${content}</section><p>`
         }
         for (let j in tag) {
-            str += `<span class="${tag[j]}">${tag[j]}</span>`
+            str += `<span class="${tag[j]}">${tag[j].toUpperCase()}</span>`
         }
         str += `<span class="time">${data[i].time}</span></p></div>`
     }
