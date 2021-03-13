@@ -1,5 +1,5 @@
 let xhr1 = new XMLHttpRequest();
-xhr1.open('GET', 'https://hugstars.github.io/data/excerpt.json');
+xhr1.open('GET', '../data/excerpt.json');
 xhr1.send();
 xhr1.onreadystatechange = function () {
     if (xhr1.readyState == 4 && xhr1.status == 200) {
@@ -24,7 +24,7 @@ function callBackData(data) {
             str += `<div class="main-item"><a href="${href}">${title}</a><section>${content}</section><p>`
         }
         for (let j in tag) {
-            str += `<span class="${tag[j]}">${tag[j].toUpperCase()}</span>`
+            str += `<span class="${j}">${tag[j].toUpperCase()}</span>`
         }
         str += `<span class="time">${data[i].time}</span></p></div>`
     }

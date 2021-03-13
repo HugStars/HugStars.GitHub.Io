@@ -228,7 +228,7 @@ main {
 
 .main-item .js {
     border: 1px solid #faa;
-    background: rgba(255, 170, 170, .56);
+    background: hsla(0, 100%, 83%, .56);
     box-shadow: 1px 1px 1px #c88, -1px -1px 2px #fcc
 }
 
