@@ -233,6 +233,7 @@ main {
 }
 
 .main-item .time {
+    border: 1px solid #eee;
     float: right;
     box-shadow: 1px 1px 1px #bebebe, -1px -1px 2px #fff
 }
