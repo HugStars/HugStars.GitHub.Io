@@ -26,7 +26,7 @@ function callBackData(data) {
         for (let j in tag) {
             str += `<span class="${tag[j]}">${tag[j]}</span>`
         }
-        str += `<span class="time">${data.time}</span></p></div>`
+        str += `<span class="time">${data[i].time}</span></p></div>`
     }
     main.innerHTML += str;
 
