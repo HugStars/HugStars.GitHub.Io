@@ -347,4 +347,8 @@ footer a {
         border-radius: 10px;
         box-shadow: inset 2px 2px 1px #a7a7a7, inset -2px -2px 1px #fff
     }
+
+    .main-item section {
+        font-size: 14px;
+    }
 }
