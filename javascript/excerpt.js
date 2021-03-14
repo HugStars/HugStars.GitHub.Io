@@ -35,15 +35,20 @@ function callBackData(data) {
     let sec = document.querySelectorAll('main section');
     for (let l = 0; l < input.length; l++) {
         let flag = true;
+        let hg, parhg;
+        let num = 0;
         input[l].onclick = function () {
-            let hg = this.parentNode.querySelector('section').offsetHeight;
-            let parhg = this.parentNode.offsetHeight;
             if (flag) {
+                if (num == 0) {
+                    hg = this.parentNode.querySelector('section').offsetHeight;
+                    parhg = this.parentNode.offsetHeight;
+                    num++;
+                }
                 this.parentNode.style.height = parhg + hg + 'px';
                 flag = false;
             }
             else {
-                this.parentNode.style.height = parhg - hg + 'px';
+                this.parentNode.style.height = parhg + 'px';
                 flag = true;
             }
         }
