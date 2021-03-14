@@ -207,17 +207,10 @@ main {
     opacity: 0
 }
 
-.main-item input:checked~i {
-    transform: rotate(180deg)
-}
-
-.main-item input:checked~section {
-    opacity: 1
-}
-
 .main-item i {
     background: url(../image/unfold.svg);
     background-size: 100% 100%;
+    transform: rotate(180deg);
     transition: all .5s
 }
 
@@ -225,6 +218,14 @@ main {
     font-size: 16px;
     opacity: 0;
     transition: all .5s
+}
+
+.main-item input:checked~i {
+    transform: rotate(0deg)
+}
+
+.main-item input:checked~section {
+    opacity: 1
 }
 
 .main-item p, .main-item section {
@@ -347,7 +348,6 @@ footer a {
         border-radius: 10px;
         box-shadow: inset 2px 2px 1px #a7a7a7, inset -2px -2px 1px #fff
     }
-
     .main-item section {
         font-size: 14px;
     }
