@@ -7,7 +7,7 @@
         "a": {
             "title": "CSS3新增属性用法"
         },
-        "data": "box-shadow(阴影效果）<br>border-color(为边框设置多种颜色）<br>border-image(图片边框）<br>text-shadow(文本阴影）<br>text-overflow(文本截断）<br>word-wrap(自动换行）<br>border-radius(圆角边框）<br>opacity(透明度）<br>box-sizing(控制盒模型的组成模式）<br>resize(元素缩放）<br>outline(外边框）<br>background-size(指定背景图片尺寸）<br>background-origin(指定背景图片从哪里开始显示）<br>background-clip(指定背景图片从什么位置开始裁剪）<br>background(为一个元素指定多个背景）<br>hsl(通过色调、饱和度、亮度来指定颜色颜色值）<br>hsla(在hsl的基础上增加透明度设置）<br>rgba(基于rgb设置颜色，a设置透明度）",
+        "data": "<br>box-shadow (阴影效果）<br>border-color (为边框设置多种颜色）<br>border-image (图片边框）<br>text-shadow (文本阴影）<br>text-overflow (文本截断）<br>word-wrap (自动换行）<br>border-radius (圆角边框）<br>opacity (透明度）<br>box-sizing (控制盒模型的组成模式）<br>resize (元素缩放）<br>outline (外边框）<br>background-size (指定背景图片尺寸）<br>background-origin (指定背景图片从哪里开始显示）<br>background-clip (指定背景图片从什么位置开始裁剪）<br>background (为一个元素指定多个背景）<br>hsl (通过色调、饱和度、亮度来指定颜色颜色值）<br>hsla (在hsl的基础上增加透明度设置）<br>rgba (基于rgb设置颜色，a设置透明度）",
         "tag": {
             "css": "CSS3",
             "time": "2021.03.13"
@@ -17,7 +17,7 @@
         "a": {
             "title": "CSS background"
         },
-        "data": "纯色<br>线性渐变(linear-gradient)<br>径向渐变(radial-gradient)<br>角向渐变(conic-gradient)<br>多重线性渐变(repeating-linear-gradient)<br>多重径向渐变(repeating-radial-gradient)<br>多重角向渐变(repeating-conic-gradient)",
+        "data": "<br>纯色<br>线性渐变 (linear-gradient)<br>径向渐变 (radial-gradient)<br>角向渐变 (conic-gradient)<br>多重线性渐变 (repeating-linear-gradient)<br>多重径向渐变 (repeating-radial-gradient)<br>多重角向渐变 (repeating-conic-gradient)",
         "tag": {
             "css": "css",
             "time": "2021.03.13"
@@ -27,10 +27,20 @@
         "a": {
             "title": "flex 常见父项属性"
         },
-        "data": "flex-direction:设置主轴的方向<br>justify-content:设置主轴上的子元素排列方式<br>flex-wrap:设置子元素是否换行<br>align-content:设置侧轴上的子元素的排列方式（多行）<br>align-items:设置侧轴上的子元素排列方式（单行）<br>flex-flow:复合属性，相当于同时设置了flex-direction和flex-wrap",
+        "data": "<br>flex-direction (设置主轴的方向)<br>justify-content (设置主轴上的子元素排列方式)<br>flex-wrap (设置子元素是否换行)<br>align-content (设置侧轴上的子元素的排列方式（多行）)<br>align-items (设置侧轴上的子元素排列方式（单行）)<br>flex-flow (复合属性，相当于同时设置了flex-direction和flex-wrap)",
         "tag": {
             "css": "css",
             "time": "2021.03.13"
+        }
+    },
+    {
+        "a": {
+            "title": "JavaScript的奇淫技巧"
+        },
+        "data": "<br><b>取整</b>：<br>&emsp;&emsp; parseInt(a,10); <span style = 'color : green'>(Before)</span><br>&emsp;&emsp; Math.floor(a); <span style = 'color : green'> (Before)</span><br>&emsp;&emsp; a>>0; <span style = 'color : green'> (Before)</span><br>&emsp;&emsp; ~~a; <span style = 'color : green'> (After)</span><br>&emsp;&emsp; a10; <span style = 'color : green'> (After)</span><br><b>四舍五入</b>：<br>&emsp;&emsp; Math.round(a); <span style = 'color : green'>(Before)</span><br>&emsp;&emsp; a+.510; <span style = 'color : green'> (After)</span><br><b>内置值</b>：<br>&emsp;&emsp; undefined; <span style = 'color : green'>(Before)</span><br>&emsp;&emsp; void0; <span style = 'color : green'> (After，快)</span><br>&emsp;&emsp; 0[0]; <span style = 'color : green'> (After，略慢)</span><br><b>内置值</b>：<br>&emsp;&emsp; infinity; <span style = 'color : green'>(Before)</span><br>&emsp;&emsp; 1/0; <span style = 'color : green'> (After，快)</span><br><b>布尔值短写法</b>：<br>&emsp;&emsp; true; <span style = 'color : green'>(Before)</span><br>&emsp;&emsp; !0; <span style = 'color : green'> (After)</span><br><b>布尔值短写法</b>：<br>&emsp;&emsp; false; <span style = 'color : green'>(Before)</span><br>&emsp;&emsp; !1; <span style = 'color : green'> (After)</span>",
+        "tag": {
+            "js": "Javascript",
+            "time": "2021.03.14"
         }
     }
 ]
