@@ -170,12 +170,15 @@ main {
     margin-top: 60px;
     padding: 30px 30px 50px;
     width: 50%;
-    vertical-align: middle
+    height: 109px;
+    vertical-align: middle;
+    transition: all .5s
 }
 
 .main-item a {
     display: block;
     overflow: hidden;
+    margin-right: 30px;
     color: var(--coloe4);
     text-align: left;
     text-overflow: ellipsis;
@@ -190,8 +193,38 @@ main {
     animation-fill-mode: forwards
 }
 
+.main-item i, .main-item input {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 29px;
+    height: 29px;
+    cursor: pointer
+}
+
+.main-item input {
+    z-index: 1;
+    opacity: 0
+}
+
+.main-item input:checked~i {
+    transform: rotate(180deg)
+}
+
+.main-item input:checked~section {
+    opacity: 1
+}
+
+.main-item i {
+    background: url(../image/unfold.svg);
+    background-size: 100% 100%;
+    transition: all .5s
+}
+
 .main-item section {
-    font-size: 16px
+    font-size: 16px;
+    opacity: 0;
+    transition: all .5s
 }
 
 .main-item p, .main-item section {
@@ -233,8 +266,8 @@ main {
 }
 
 .main-item .time {
-    border: 1px solid #eee;
     float: right;
+    border: 1px solid #eee;
     box-shadow: 1px 1px 1px #bebebe, -1px -1px 2px #fff
 }
 

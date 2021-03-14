@@ -1,5 +1,6 @@
 let xhr1 = new XMLHttpRequest();
 xhr1.open('GET', '../data/excerpt.json');
+// xhr1.open('GET', 'https://hugstars.github.io/data/excerpt.json');
 xhr1.send();
 xhr1.onreadystatechange = function () {
     if (xhr1.readyState == 4 && xhr1.status == 200) {
@@ -18,7 +19,7 @@ function callBackData(data) {
         let content = data[i].data;
         let tag = data[i].tag;
         if (href == undefined) {
-            str += `<div class="main-item"><a>${title}</a><section>${content}</section><p>`
+            str += `<div class="main-item"><a>${title}</a><input type="checkbox"></input><i></i><section>${content}</section><p>`
         }
         else {
             str += `<div class="main-item"><a href="${href}">${title}</a><section>${content}</section><p>`
@@ -30,5 +31,21 @@ function callBackData(data) {
     }
     main.innerHTML += str;
 
+    let input = document.querySelectorAll('main input');
+    let sec = document.querySelectorAll('main section');
+    for (let l = 0; l < input.length; l++) {
+        let flag = true;
+        input[l].onclick = function () {
+            let hg = this.parentNode.querySelector('section').offsetHeight;
+            let parhg = this.parentNode.offsetHeight;
+            if (flag) {
+                this.parentNode.style.height = parhg + hg + 'px';
+                flag = false;
+            }
+            else {
+                this.parentNode.style.height = parhg - hg + 'px';
+                flag = true;
+            }
+        }
+    }
 }
-document.getElementById("script").remove();
