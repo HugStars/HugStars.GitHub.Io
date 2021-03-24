@@ -1,0 +1,348 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all .2s;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0)
+}
+
+:root {
+    --bg: #f3f6fd;
+    --pbg: #fff;
+    --hover: #c3cff4;
+    --tc: #201d2f;
+    --mtc: #4a4a4a;
+    --c1: #fee4cb;
+    --c1tc: #ff942e;
+    --c2: #e9e7fd;
+    --c2tc: #4f3ff0;
+    --c3: #dbf6fd;
+    --c3tc: #096c86;
+    --c4: #ffd3e2;
+    --c4tc: #df3670;
+    --c5: #c8f7dc;
+    --c5tc: #34c471;
+    --mask: hsla(0, 0%, 100%, 0.6)
+}
+
+.dark:root {
+    --bg: #111827;
+    --pbg: #353c50;
+    --hover: #c3cff4;
+    --tc: #fff;
+    --mtc: #d1d3d6
+}
+
+.flex-col, .flex-row {
+    display: flex
+}
+
+.flex-col {
+    flex-direction: column
+}
+
+body::-webkit-scrollbar {
+    display: none
+}
+
+body {
+    margin: auto;
+    padding: 2.6%;
+    width: 100vw;
+    height: 100vh;
+    max-width: 1500px;
+    background: var(--bg)
+}
+
+header {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 40px;
+    color: var(--tc)
+}
+
+.moon {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transition: all .2s;
+    fill: var(--bg);
+    stroke: var(--tc)
+}
+
+h1 {
+    margin-left: 20px;
+    font-size: 26px;
+    user-select: none
+}
+
+article, main {
+    overflow: hidden;
+    flex: 1
+}
+
+article {
+    display: flex;
+    height: 100%;
+    border: 20px solid var(--pbg);
+    border-radius: 30px;
+    background: var(--pbg);
+    flex-direction: column
+}
+
+.header {
+    padding: 0 10px;
+    width: 100%;
+    height: 46px;
+    user-select: none
+}
+
+.header span {
+    position: relative;
+    color: var(--tc);
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer
+}
+
+.header span:after {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--tc);
+    content: ""
+}
+
+.header span:hover {
+    color: var(--hover)
+}
+
+.header span:hover:after {
+    background: var(--hover)
+}
+
+.header .art, .header .back {
+    display: none
+}
+
+.aside-header {
+    padding: 0 10px;
+    width: 100%;
+    height: 46px;
+    user-select: none
+}
+
+.aside-header span {
+    position: relative;
+    color: var(--tc);
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer
+}
+
+.aside-header span:hover {
+    color: var(--hover)
+}
+
+.aside-header .art, .aside-header .back {
+    display: none
+}
+
+.main {
+    display: flex;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%
+}
+
+.aside-main::-webkit-scrollbar, .main::-webkit-scrollbar {
+    width: 5px
+}
+
+.aside-main::-webkit-scrollbar-thumb, .main::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: var(--c5tc)
+}
+
+.aside-main::-webkit-scrollbar-thumb, .main::-webkit-scrollbar-thumb:hover {
+    background-color: var(--c1tc)
+}
+
+.aside-main::-webkit-scrollbar-thumb:hover {
+    background-color: var(--c5tc)
+}
+
+.left, .right {
+    width: 100%
+}
+
+.right {
+    margin-right: 5px;
+    margin-left: 20px
+}
+
+.item {
+    padding: 20px;
+    width: 100%;
+    border-radius: 10px;
+    animation: show .5s linear;
+    grid-auto-flow: row dense
+}
+
+.item+.item {
+    margin-top: 20px
+}
+
+h3 {
+    font-size: 18px
+}
+
+.cont, h3 {
+    text-align: justify
+}
+
+.cont {
+    font-size: 16px
+}
+
+.cont, .foot {
+    overflow: hidden;
+    margin-top: 5px
+}
+
+.author, .source, .time {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px
+}
+
+.time {
+    float: right
+}
+
+hr {
+    height: 2px;
+    border: 0
+}
+
+aside {
+    overflow: hidden;
+    margin-left: 20px;
+    width: 380px;
+    height: 100%;
+    border-radius: 30px;
+    background: var(--pbg);
+    border: 10px solid var(--pbg);
+    border-top-width: 20px
+}
+
+aside h2 {
+    margin-left: 10px;
+    height: 44px;
+    color: var(--tc)
+}
+
+.aside-main {
+    overflow-y: scroll;
+    padding-right: 5px;
+    width: 100%;
+    height: 100%
+}
+
+.aside-item {
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    animation: show .5s linear
+}
+
+.aside-item+.aside-item {
+    margin-top: 10px
+}
+
+.aside-item a {
+    font-weight: 600;
+    font-size: 18px
+}
+
+.aside-item:last-of-type {
+    margin-bottom: 50px
+}
+
+footer {
+    height: 40px
+}
+
+@keyframes show {
+    0% {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@media screen and (max-width:1400px) {
+    aside {
+        display: none;
+        width: 720px
+    }
+    .aside-header .back, .header .art {
+        float: right;
+        display: block
+    }
+}
+
+@media screen and (max-width:900px) {
+    .moon {
+        margin-top: 10px
+    }
+    h1 {
+        margin-top: 12px;
+        font-size: 22px
+    }
+    article {
+        border-width: 10px
+    }
+    .aside-item a, h3 {
+        font-size: 16px
+    }
+    .cont {
+        font-size: 14px
+    }
+    .author, .source, .time {
+        font-size: 12px
+    }
+    .aside-header, .header {
+        height: 30px
+    }
+    .aside-header span, .header span {
+        font-size: 16px
+    }
+    .main {
+        display: block
+    }
+    .left, .right {
+        width: auto
+    }
+    .right {
+        margin: 10px 0 0
+    }
+    .item {
+        padding: 10px;
+        width: 98%
+    }
+    .item+.item {
+        margin-top: 10px
+    }
+    .aside-main::-webkit-scrollbar, .main::-webkit-scrollbar {
+        width: 3px
+    }
+    aside {
+        width: 100%;
+        border-top-width: 10px
+    }
+}

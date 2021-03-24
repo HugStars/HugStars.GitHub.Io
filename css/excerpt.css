@@ -118,7 +118,7 @@ nav .control, nav input {
     height: 25px;
     cursor: pointer;
     transition: all .5s;
-    transform: rotate(180deg)
+    transform: rotate(180deg);
 }
 
 nav input {
@@ -347,6 +347,9 @@ footer a {
     .main-item:nth-child(4n-1) {
         border-radius: 10px;
         box-shadow: inset 2px 2px 1px #a7a7a7, inset -2px -2px 1px #fff
+    }
+    .main-item a {
+        font-size: 15px;
     }
     .main-item section {
         font-size: 14px;
