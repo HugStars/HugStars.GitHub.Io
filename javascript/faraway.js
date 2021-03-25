@@ -34,8 +34,10 @@ function rec() {
 }
 
 let urlArr = [
-    '../data/synth.json',
-    '../data/html.json'
+    // '../data/synth.json',
+    // '../data/html.json'
+    'https://hugstars.github.io/data/synth.json',
+    'https://hugstars.github.io/data/html.json'
 ]
 
 function xhr(url) {
