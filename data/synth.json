@@ -1,7 +1,7 @@
 [
     {
         "h3": "列表的type属性",
-        "data": "无序列表<ul> type属性：square：方块、circle：圆圈、disc：圆点<br>有序列表<ol> type属性：1：数字序号、A：大写序号、a：小写序号、I：大罗马序号、i：小罗马序号",
+        "data": "无序列表&lt;ul&gt; type属性：square：方块、circle：圆圈、disc：圆点<br>有序列表&lt;ol&gt; type属性：1：数字序号、A：大写序号、a：小写序号、I：大罗马序号、i：小罗马序号",
         "tag": {
             "time": "2021-3-25"
         }
