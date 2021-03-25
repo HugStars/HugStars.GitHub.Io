@@ -6,6 +6,13 @@
             "author": "CSDN 会飞的Pikachu",
             "time": "2021-3-25"
         }
+    }, 
+    {
+        "h3": "CSS resize 属性",
+        "data": "resize：规定元素是否可由用户调整大小。<br>resize：none | both | horizontal | vertical;<br>&emsp;none：用户无法调整元素的尺寸。<br>&emsp;both：用户可调整元素的高度和宽度。<br>&emsp;horizontal：用户可调整元素的宽度。<br>&emsp;vertical：用户可调整元素的高度。",
+        "tag": {
+            "time": "2021-3-25"
+        }
     },
     {
         "h3": "测试标题 Title--1",
