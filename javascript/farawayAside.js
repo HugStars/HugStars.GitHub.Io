@@ -1,6 +1,5 @@
 let asideXhr = new XMLHttpRequest();
-// asideXhr.open('get','../data/aside.json');
-asideXhr.open('get', 'https://hugstars.github.io/data/aside.json');
+asideXhr.open('get','../data/aside.json');
 asideXhr.send();
 asideXhr.onreadystatechange = function () {
     if (asideXhr.readyState == 4 && asideXhr.status == 200) {
