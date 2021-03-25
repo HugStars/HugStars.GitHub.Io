@@ -1,5 +1,40 @@
 [
     {
+        "h3": "列表的type属性",
+        "data": "无序列表<ul> type属性：square：方块、circle：圆圈、disc：圆点<br>有序列表<ol> type属性：1：数字序号、A：大写序号、a：小写序号、I：大罗马序号、i：小罗马序号",
+        "tag": {
+            "time": "2021-3-25"
+        }
+    },
+    {
+        "h3": "resize：调整元素大小",
+        "data": "resize：none | both | horizontal | vertical;<br>一般用于调整textarea元素，但也可作用于其他元素。",
+        "tag": {
+            "time": "2021-3-25"
+        }
+    },
+    {
+        "h3": "input的type类型：",
+        "data": "text：文本框、password ：密码框、checkbox ：复选框、radio：单选按钮、submit：表示该按钮是一个提交按钮，有提交表单的能力、button：普通按钮，不具备提交能力、reset：重置表单、file：文件上传专用、hidden：隐藏域，网页上看不到但是表单提交时数据会自动提交给服务器。<br><br>readonly：只读，不可以修改，可以提交给服务器。&lt;input type=''&emsp;readonly&gt;<br>disabled：只读，不可以修改，不会提交给服务器（即使有name属性也不会提交）&lt;input type='' disabled&gt;",
+        "tag": {
+            "time": "2021-3-25"
+        }
+    },
+    {
+        "h3": "shape-outside：设置浮动元素的外部形状，周围文本以此形状进行环绕",
+        "data": "关键字值：none、 margin-box、 content-box、border-box、padding-box<br>函数值：circle()、ellipse()、inset(10px 10px 10px 10px)、polygon(10px 10px, 20px 20px, 30px 30px)<br>url值：shape-outside: url( image.png )<br>渐变值：linear-gradient( 45deg, rgba( 255, 255, 255, 0 ) 150px, red 150px )<br>全局值： initial、inherit、unset",
+        "tag": {
+            "time": "2021-3-25"
+        }
+    },
+    {
+        "h3": "H5新增input表单、属性",
+        "data": "email：限制用户输入必须为Email类型<br>url：限制用户输入必须为URL类型<br>date：限制用户输入必须为日期类型<br>time：限制用户输入必须为时间类型<br>month：限制用户输入必须为月类型<br>week：限制用户输入必须为周类型<br>number：限制用户输入必须为数字类型<br>tel：手机号码<br>search：搜索框<br>color：生成一个颜色选择表单<br><br>required：表单拥有该属性表示其内容不能为空，必填<br>placeholder：提示文本<br>autofocus：页面加载完成自动聚焦到指定表单<br>autocomplete：当用户在字段开始键入时，浏览器基于之前键入过的默认已经打开，如autocomplete='on'，需要表单有name属性且成功提交过<br>multiple：可以多选文件提交<br>",
+        "tag": {
+            "time": "2021-3-25"
+        }
+    },
+    {
         "h3": "禁用一个元素",
         "data": "可以使用pointer-event属性的none值来有效的禁用元素。不管是JQuery还是JavaScript，点击事件都不会被触发。",
         "tag": {
@@ -8,39 +43,27 @@
         }
     },
     {
-        "h3": "resize：调整元素大小",
-        "data": "resize：none | both | horizontal | vertical;<br>&emsp;一般用于调整textarea元素，但也可作用于其他元素。",
+        "h3": "CSS动画可以暂停",
+        "data": "animation-play-state: paused;",
         "tag": {
+            "author": "掘金 老姚",
             "time": "2021-3-25"
         }
     },
     {
-        "h3": "测试标题 Title--2",
-        "data": "测试数据——测试数据——测试数据——测试数据——测试数据——测试数据——测试数据——测试数据--2",
+        "h3": "角向渐变实现饼图",
+        "data": "background: conic-gradient(blue 0 50%, red 50% 0);",
         "tag": {
-            "time": "2021-3-24"
+            "author": "掘金 老姚",
+            "time": "2021-3-25"
         }
     },
     {
-        "h3": "测试标题 Title--3",
-        "data": "测试数据——测试数据——测试数据--3",
+        "h3": "animation动画方向",
+        "data": "去回交替前行：animation-direction:alternate<br>反向：animation-direction:alternate-reverse",
         "tag": {
-            "time": "2021-3-24"
-        }
-    },
-    {
-        "h3": "测试标题 Title--4",
-        "data": "测试数据——测试数据——测试数据--4",
-        "tag": {
-            "author": "author2",
-            "time": "2021-3-24"
-        }
-    },
-    {
-        "h3": "测试标题 Title--5",
-        "data": "测试数据——测试数据——测试数据——测试数据——测试数据——测试数据——测试数据——测试数据——测试数据--5",
-        "tag": {
-            "time": "2021-3-24"
+            "author": "掘金 老姚",
+            "time": "2021-3-25"
         }
     }
 ]
