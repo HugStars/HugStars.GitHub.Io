@@ -1,5 +1,13 @@
 [
     {
+        "h3": "禁用一个元素",
+        "data": "可以使用pointer-event属性的none值来有效的禁用元素。不管是JQuery还是JavaScript，点击事件都不会被触发。",
+        "tag": {
+            "author": "CSDN 会飞的Pikachu",
+            "time": "2021-3-25"
+        }
+    },
+    {
         "h3": "测试标题 Title--1",
         "data": "测试数据——测试数据——测试数据--2",
         "tag": {
