@@ -5,7 +5,7 @@
 
 This is a personal blog test site, all content are test content, does not represent the final quality.
  
-### 🍓About bloggers:：
+### 🍓About bloggers:
 
 The star, male, 2000. Blade&Soul.
  
