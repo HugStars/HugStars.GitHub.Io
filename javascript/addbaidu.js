@@ -23,5 +23,5 @@ function callBack(data) {
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
     })();
-
+    document.querySelector('.addbaidu').remove();
 }
