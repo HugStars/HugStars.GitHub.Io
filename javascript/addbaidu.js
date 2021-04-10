@@ -1,13 +1,13 @@
 let site = window.location.href;
 site = site.split(/git/i)[1].split('/')[0].toLowerCase();
 // console.log(site);
-let xhr = new XMLHttpRequest();
+let addBaiduXhr = new XMLHttpRequest();
 // xhr.open("GET", `https://hugstars.git${site}.io/data/baidu.json`);
-xhr.open("GET", `../data/baidu.json`);
-xhr.send();
-xhr.onreadystatechange = function () {
-    if (xhr.readyState == 4 && xhr.status == 200) {
-        callBack(JSON.parse(xhr.responseText));
+addBaiduXhr.open("GET", `../data/baidu.json`);
+addBaiduXhr.send();
+addBaiduXhr.onreadystatechange = function () {
+    if (addBaiduXhr.readyState == 4 && addBaiduXhr.status == 200) {
+        callBack(JSON.parse(addBaiduXhr.responseText));
     }
 }
 
