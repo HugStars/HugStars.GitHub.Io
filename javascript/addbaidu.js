@@ -1,5 +1,5 @@
 let site = window.location.href;
-site = site.split(/git/i)[1].split('.')[0].toLowerCase();
+site = site.split(/git/i)[1].split('/')[0].toLowerCase();
 // console.log(site);
 let xhr = new XMLHttpRequest();
 // xhr.open("GET", `https://hugstars.git${site}.io/data/baidu.json`);

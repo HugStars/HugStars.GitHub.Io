@@ -122,5 +122,12 @@
         "tag": {
             "time": "2021-4-1"
         }
+    },
+    {
+        "h3": "传统形式URL地址格式",
+        "data": "格式：schema://host:port/path?query#fragment<br>①schema：协议。例如http，https，ftp等<br>②host：域名或IP地址<br>③port：端口，http默认端口80，可以省略<br>④path：路径，例如/abc/b/c<br>⑤query：查询参数，例如uname=lisi&age=12<br>⑥fragment：锚点(哈希Hash)，用于定位页面的某个位置",
+        "tag": {
+            "time": "2021-4-8"
+        }
     }
 ]

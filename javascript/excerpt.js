@@ -32,7 +32,6 @@ function callBackData(data) {
     main.innerHTML += str;
 
     let input = document.querySelectorAll('main input');
-    let sec = document.querySelectorAll('main section');
     for (let l = 0; l < input.length; l++) {
         let flag = true;
         let hg, parhg;
