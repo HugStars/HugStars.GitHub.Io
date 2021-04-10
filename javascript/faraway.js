@@ -35,9 +35,9 @@ function rec() {
 
 let urlArr = [
     // '../data/synth.json',
-    // '../data/html.json'
+    // '../data/vueSynth.json',
     'https://hugstars.github.io/data/synth.json',
-    'https://hugstars.github.io/data/html.json'
+    'https://hugstars.github.io/data/vueSynth.json'
 ]
 
 function xhr(url) {
