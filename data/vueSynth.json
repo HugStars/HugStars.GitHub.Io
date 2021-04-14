@@ -19,5 +19,12 @@
         "tag": {
             "time": "2021-4-1"
         }
+    },
+    {
+        "h3": "改变路径的方式",
+        "data": "改变路径的方式有两种：<br>URL的hash；（默认）<br>H5的history；<br>如果希望使用H5的history：<br>可以在router实例中添加mode：'history'",
+        "tag": {
+            "time": "2021-4-14"
+        }
     }
 ]
