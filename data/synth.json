@@ -136,5 +136,13 @@
         "tag": {
             "time": "2021-4-14"
         }
+    },
+    {
+        "h3": "router-link属性：to 、replace、append、tag、active-class、exact 、event、exact-active-class",
+        "data": "1、to（必选参数）：类型string/location<br>&emsp;&emsp;表示目标路由的链接，该值可以是一个字符串，也可以是动态绑定的描述目标位置的对象<br><br>2、tag（默认：a）：类型: string<br>&emsp;&emsp;&lt;router-link&gt; 将被渲染成某种标签 例如：&lt;li&gt;<br>&emsp;&emsp;另：如果在&lt;li&gt;中添加&lt;a&gt;，不必给&lt;a&gt;设置href，&lt;a&gt;将作为真实的链接 (它会获得正确的 href )，而'激活时的CSS类名'则设置到外层的 &lt;li&gt;。<br><br>3、active-class（默认：'router-link-active'）：类型: string<br>&emsp;&emsp;设置链接激活时使用的 CSS 类名。默认值可以通过路由的构造选项 linkActiveClass 来全局配置。<br><br>4、exact-active-class（默认: 'router-link-exact-active'）：类型: string<br>&emsp;&emsp;配置当链接被精确匹配的时候应该激活的 class。注意默认值也是可以通过路由构造函数选项 linkExactActiveClass 进行全局配置的。<br><br>5、exact（默认: false）：类型: boolean<br>&emsp;&emsp;'是否激活'默认类名的依据是 inclusive match (全包含匹配)。 <br>&emsp;&emsp;举个例子，如果当前的路径是 /a 开头的，那么 &lt;router-link to='/a'&gt; 也会被设置 CSS 类名。<br><br>6、event（默认: 'click'）：类型: string | Array&lt;string&gt;<br>&emsp;&emsp;声明可以用来触发导航的事件。可以是一个字符串。<br>&emsp;&emsp;如果我们不加event，那么默认情况下是当我们点击document的时候，跳转到相应的页面，但当我们加上event的时候，就可以改变触发导航的事件，比如鼠标移入事件。<br><br>7、replace（默认: false）：类型: boolean<br>&emsp;&emsp;设置 replace 属性的话，当点击时，会调用 router.replace() 而不是 router.push()，于是导航后不会留下 history 记录。<br><br>8、append（默认: false）：类型: boolean<br>&emsp;&emsp;设置 append 属性后，则在当前 (相对) 路径前添加基路径",
+        "tag": {
+            "author": "CSDN 冰雪为融",
+            "time": "2021-4-14"
+        }
     }
 ]
