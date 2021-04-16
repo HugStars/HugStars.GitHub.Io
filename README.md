@@ -1,5 +1,5 @@
 # HugStars.GitHub.Io 
-## [✨HugStars](https://hugstars.github.io)
+## [✨HugStars](https://hugstars.gitee.io)
 
 ### 🍉About this website:
 
