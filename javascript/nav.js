@@ -115,5 +115,15 @@ pEl.onclick = function () {
     window.location.href = window.location.href
 }
 
+ let testXml = new XMLHttpRequest();
+    testXml.open('get', 'https://api.fanyi.baidu.com/api/trans/vip/translate?q=apple&from=en&to=zh&appid=20210501000809957&salt=JLS3zJ9zGJ9XsYiIZA5C');
+    testXml.send();
+    testXml.onreadystatechange = function () {
+        if (testXml.readyState == 4 && testXml.status == 200) {
+           console.log(testXml.responseText);
+        }
+    }
+
+
 document.querySelector('.jsSearch').remove();
 document.querySelector('.jsNav').remove();
