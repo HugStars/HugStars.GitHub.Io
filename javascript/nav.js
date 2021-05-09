@@ -5,8 +5,8 @@ let website = [{
     name: 'music',
     http: 'https://music.163.com',
 }, {
-    name: '8888',
-    http: 'http://127.0.0.1:8888'
+    name: '3000',
+    http: 'http://127.0.0.1:3000'
 }, {
     name: 'API',
     http: 'http://api.btstu.cn'
