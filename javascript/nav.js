@@ -77,8 +77,8 @@ let website = [{
     name: 'JSONEditor',
     http: 'file:///E:/%E5%89%8D%E7%AB%AF/%E7%BB%83%E4%B9%A0/-24(JSONEditor).html'
 }, {
-    name: 'youdao',
-    http: 'http://fanyi.youdao.com'
+    name: 'fanyi',
+    http: 'https://fanyi.baidu.com'
 }]
 
 let poems = [
