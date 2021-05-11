@@ -21,7 +21,7 @@ let website = [{
     http: 'https://github.com/HugStars/HugStars.GitHub.Io'
 }, {
     name: 'GitEE',
-    http: 'https://gitee.com'
+    http: 'https://gitee.com/hugstars/hugstars'
 }, {
     name: 'Hug-Hub',
     http: 'https://hugstars.github.io/home.html'
