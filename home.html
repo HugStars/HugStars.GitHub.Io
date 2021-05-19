@@ -53,6 +53,12 @@
     </main>
 
     <script src="./javascript/refresh.js"></script>
+    <script>
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+WeixinJSBridge.call('hideOptionMenu');
+});
+    </script>
+    
 </body>
 
 </html>
