@@ -1,25 +1,5 @@
 [
     {
-        "orderNumber": 3221042800115011,
-        "userID": 3203000186009,
-        "userName": "江苏001号",
-        "userTag": "高压客户",
-        "userAddr": "江苏省南京市玄武区后宅门18号",
-        "Time": 36000,
-        "submitTime": "2021-04-31 11:25:22",
-        "flag": true
-    },
-    {
-        "orderNumber": 3221042887529101,
-        "userID": 3203090872029,
-        "userName": "杭州002号",
-        "userTag": "低压居民",
-        "userAddr": "浙江省杭州市**区**路**号",
-        "Time": 72000,
-        "submitTime": "2021-04-31 11:25:22",
-        "flag": true
-    },
-    {
         "orderNumber": 3221042800118888,
         "userID": 3203000188888,
         "userName": "南京003号",
@@ -106,6 +86,26 @@
         "userTag": "高压客户",
         "userAddr": "陕西省西安市**区**路**号",
         "Time": 36000,
+        "submitTime": "2021-04-31 11:25:22",
+        "flag": true
+    },
+    {
+        "orderNumber": 3221042800115011,
+        "userID": 3203000186009,
+        "userName": "江苏001号",
+        "userTag": "高压客户",
+        "userAddr": "江苏省南京市玄武区后宅门18号",
+        "Time": 36000,
+        "submitTime": "2021-04-31 11:25:22",
+        "flag": true
+    },
+    {
+        "orderNumber": 3221042887529101,
+        "userID": 3203090872029,
+        "userName": "杭州002号",
+        "userTag": "低压居民",
+        "userAddr": "浙江省杭州市**区**路**号",
+        "Time": 72000,
         "submitTime": "2021-04-31 11:25:22",
         "flag": true
     },
