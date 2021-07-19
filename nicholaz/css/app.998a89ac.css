@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all .2s;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0)
+}
+
+:root {
+    --bg: #f3f6fd;
+    --pbg: #fff;
+    --hover: #c3cff4;
+    --tc: #201d2f;
+    --mtc: #4a4a4a;
+    --c1: #fee4cb;
+    --c1tc: #ff942e;
+    --c2: #e9e7fd;
+    --c2tc: #4f3ff0;
+    --c3: #dbf6fd;
+    --c3tc: #096c86;
+    --c4: #ffd3e2;
+    --c4tc: #df3670;
+    --c5: #c8f7dc;
+    --c5tc: #34c471;
+    --mask: hsla(0, 0%, 100%, 0.6)
+}
+
+.dark:root {
+    --bg: #111827;
+    --pbg: #353c50;
+    --hover: #c3cff4;
+    --tc: #fff;
+    --mtc: #d1d3d6
+}
+
+.flex-col, .flex-row {
+    display: flex
+}
+
+.flex-col {
+    flex-direction: column
+}
+
+body::-webkit-scrollbar {
+    display: none
+}
+
+body {
+    margin: auto;
+    padding: 2.6%;
+    width: 100vw;
+    height: 100vh;
+    max-width: 1200px;
+    background: var(--bg)
+}
+
+#app {
+    height: 100%
+}
+
+header {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 40px;
+    color: var(--tc)
+}
+
+.moon {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transition: all .2s;
+    fill: var(--bg);
+    stroke: var(--tc)
+}
+
+h1 {
+    margin-left: 20px;
+    font-size: 26px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+h1:hover {
+    color: var(--hover)
+}
+
+main {
+    height: calc(100% - 50px);
+    border: 20px solid var(--pbg);
+    border-right-width: 10px;
+    border-radius: 30px;
+    background: var(--pbg);
+    overflow-y: scroll
+}
+
+main::-webkit-scrollbar {
+    width: 7px
+}
+
+main::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: var(--c5tc)
+}
+
+main::-webkit-scrollbar-thumb:hover {
+    background-color: var(--c1tc)
+}
+
+@media screen and (max-width:900px) {
+    .moon {
+        margin-top: 10px
+    }
+    h1 {
+        margin-top: 12px;
+        font-size: 20px
+    }
+    main::-webkit-scrollbar {
+        width: 5px
+    }
+    h3 {
+        font-size: 16px
+    }
+}
