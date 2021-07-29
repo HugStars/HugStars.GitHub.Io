@@ -1,9 +1,0 @@
-h2 {
-    text-align: center;
-    text-decoration: underline;
-    cursor: pointer
-}
-
-h2:hover {
-    color: var(--hover)
-}
