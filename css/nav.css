@@ -1,10 +1,14 @@
 * {
     margin: 0;
     padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    -ms-tap-highlight-color: transparent;
+    -moz-tap-highlight-color: transparent;
+    -o-tap-highlight-color: transparent;
 }
 
 body {
-    padding-top: 200px;
+    padding-top: 10vmax;
     user-select: none;
     /* background: linear-gradient(to left, #999 50%, transparent 0) 0 / 1vmin 1px repeat-x, linear-gradient(to bottom, #999 50%, transparent 0) 50% / 1px 1vmin repeat-y; */
 }
@@ -17,39 +21,41 @@ header {
 }
 
 form {
-    width: 100%;
     display: flex;
-    justify-content: center;
+    width: 100%;
     font-size: 0;
+    justify-content: center;
 }
 
 input {
     padding: 0 15px;
     width: 80%;
-    max-width: 500px;
     height: 40px;
+    max-width: 500px;
     outline: 0;
-    border: 1px solid #e5e5e5;
+    border: 1px solid var(--color);
     border-radius: 10px 0 0 10px;
+    background: 0 0;
     font-size: 20px;
     line-height: 40px;
     border-right-width: 0;
 }
 
 input::placeholder {
+    color: var(--color);
     font-family: Icon;
-    color: unset;
 }
 
 button {
     margin-left: 0;
     width: 20%;
-    max-width: 80px;
     height: 42px;
-    border: 1px solid #e5e5e5;
+    max-width: 80px;
+    border: 1px solid var(--color);
     border-radius: 0 10px 10px 0;
     background: 0 0;
-    box-shadow: inset 0px 0px 0px rgb(0 0 0/10%);
+    box-shadow: inset 0 0 0 rgb(0 0 0/10%);
+    color: var(--color);
     vertical-align: top;
     font-size: 18px;
     cursor: pointer;
@@ -57,20 +63,20 @@ button {
 }
 
 button:hover {
-    box-shadow: inset 0px 0px 15px rgb(0 0 0/10%);
+    box-shadow: inset 0 0 15px rgb(0 0 0/10%);
 }
 
 button:focus-visible {
     outline: 0;
-    border-color: black;
+    border-color: #000;
 }
 
 span.title {
     display: inline-block;
     margin: 50px auto;
+    color: var(--color);
     font-size: 18px;
     cursor: pointer;
-    color: rgb(86, 176, 214);
 }
 
 main {
@@ -78,6 +84,7 @@ main {
     margin: auto;
     width: 80%;
     max-width: 900px;
+    min-height: 300px;
     text-align: center;
     flex-wrap: wrap;
     justify-content: center;
@@ -89,16 +96,16 @@ a.item {
     width: 60px;
     height: 60px;
     border-radius: 20px;
+    background: #fff;
     box-shadow: 5px 5px 15px rgb(0 0 0/10%);
     color: var(--color);
-    background: #fff;
     vertical-align: top;
+    text-decoration: none;
     font-size: 30px;
     font-family: Icon;
     line-height: 60px;
     cursor: pointer;
     transition: all .1s;
-    text-decoration: none;
 }
 
 a.item:hover {
@@ -108,4 +115,38 @@ a.item:hover {
 @font-face {
     font-family: Icon;
     src: url(../font/nav.woff2);
+}
+
+aside {
+    position: fixed;
+    top: calc(50% - 80px);
+    left: 0;
+    font-size: 0;
+}
+
+.slider, aside {
+    cursor: pointer;
+}
+
+.slider {
+    display: inline-block;
+    margin: 0 5px;
+    width: 1vmin;
+    height: 65px;
+    max-width: 6px;
+    min-width: 4px;
+    border-radius: 5px;
+    background: var(--color);
+}
+
+.control {
+    display: none;
+    width: 100px;
+    height: 63px;
+    border: 1px solid var(--color);
+    border-radius: 5px;
+}
+
+aside:hover .control {
+    display: inline-block;
 }

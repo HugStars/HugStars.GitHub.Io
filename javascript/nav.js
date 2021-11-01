@@ -3,7 +3,7 @@ var list = [
     { content: '&#xe600;', color: '#446DFF', title: '阿里云盘', href: 'https://www.aliyundrive.com/drive' },
     { content: '&#xe6d1;', color: '#7AC573', title: 'A H K', href: 'https://www.autoahk.com' },
     { content: '&#xe6ba;', color: '#4395FF', title: '翻译', href: 'https://fanyi.baidu.com' },
-    { content: '&#xe68a;', color: '#9618FB', title: '图标库', href: 'https://www.iconfont.cn' },
+    { content: '&#xe68a;', color: '#6543FF', title: '图标库', href: 'https://www.iconfont.cn' },
     { content: '&#xe605;', color: '#009A61', title: '在线工具', href: 'https://tool.lu' },
     { content: '&#xe63c;', color: '#96B97D', title: '菜鸟教程', href: 'https://www.runoob.com' },
     { content: '&#xe76f;', color: '#000000', title: 'GitHub', href: 'https://github.com/HugStars/HugStars.GitHub.Io' },
@@ -11,8 +11,17 @@ var list = [
     { content: '&#xe719;', color: '#C71D23', title: 'Gitee', href: 'https://gitee.com/hugstars/hugstars' },
     { content: '&#xe628;', color: '#FB7299', title: 'bilibili', href: 'https://www.bilibili.com' },
     { content: '&#xe6cf;', color: '#F94880', title: '网站收藏', href: 'https://fuun.fun' },
-    { content: '&#xe6d6;', color: '#41AEF0', title: 'MikuTools', href: 'https://tools.miku.ac' }
+    { content: '&#xe6d6;', color: '#41AEF0', title: 'MikuTools', href: 'https://tools.miku.ac' },
+    { content: '&#xe602;', color: '#FF767D', title: '设计师导航', href: 'http://www.mfchange.cn' },
 ];
+
+
+if (!localStorage.getItem('navItem')) {
+    localStorage.setItem('navItem', JSON.stringify(list))
+}
+else {
+    list = JSON.parse(localStorage.getItem('navItem'));
+}
 
 var poems = [
     '人生路远&emsp;山河坦荡',
@@ -33,8 +42,8 @@ var poems = [
     '余生有幸识故人&emsp;可有春雪送江风',
 ];
 
-var colors = ['#99CCCC', '#996699', '#CCCC99', '#CCCCFF', '#0099CC', '#66CCCC', '#66CC99', '#666699', '#9999FF', '#CCCCFF'];
-
+var colors = ['#ee3f4d', '#7e1671', '#2f90b9', '#41CF7D', '#fb8b05'];
+var oldColor = '';
 
 var pEl = document.querySelector('span');
 var ipt = document.querySelector('input');
@@ -44,11 +53,10 @@ var main = document.querySelector('main');
 function change() {
     pEl.innerHTML = poems[Math.floor(Math.random() * poems.length)];
     var color = colors[Math.floor(Math.random() * colors.length)];
-    pEl.style.color = color;
-    ipt.style.color = color;
-    btn.style.color = color;
-    ipt.style.borderColor = color;
-    btn.style.borderColor = color;
+    if (oldColor == color) return change();
+
+    oldColor = color;
+    document.documentElement.style.setProperty('--color', color)
 }
 
 function search() {
