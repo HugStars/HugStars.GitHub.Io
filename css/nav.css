@@ -92,7 +92,7 @@ main {
 }
 
 a.item {
-    margin: 20px;
+    margin: 2vmin;
     width: 60px;
     height: 60px;
     border-radius: 20px;
