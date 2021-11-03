@@ -15,7 +15,6 @@ var list = [
     { content: '&#xe602;', color: '#FF767D', title: '设计师导航', href: 'http://www.mfchange.cn' },
 ];
 
-
 if (!localStorage.getItem('navItem')) {
     localStorage.setItem('navItem', JSON.stringify(list))
 }
@@ -41,6 +40,13 @@ var poems = [
     '又以诗意拂梦去&emsp;一处风雪两白头',
     '余生有幸识故人&emsp;可有春雪送江风',
 ];
+
+if (!localStorage.getItem('navTitle')) {
+    localStorage.setItem('navTitle', JSON.stringify(poems));
+}
+else {
+    poems = JSON.parse(localStorage.getItem('navTitle'))
+}
 
 var colors = ['#ee3f4d', '#7e1671', '#2f90b9', '#41CF7D', '#fb8b05'];
 var oldColor = '';
