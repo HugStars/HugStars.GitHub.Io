@@ -40,6 +40,8 @@ var poems = [
     '又以诗意拂梦去&emsp;一处风雪两白头',
     '余生有幸识故人&emsp;可有春雪送江风',
 ];
+var oldPoem = ''
+
 
 if (!localStorage.getItem('navTitle')) {
     localStorage.setItem('navTitle', JSON.stringify(poems));
@@ -56,13 +58,15 @@ var ipt = document.querySelector('input');
 var btn = document.querySelector('button');
 var main = document.querySelector('main');
 
-function change() {
-    pEl.innerHTML = poems[Math.floor(Math.random() * poems.length)];
-    var color = colors[Math.floor(Math.random() * colors.length)];
-    if (oldColor == color) return change();
 
-    oldColor = color;
-    document.documentElement.style.setProperty('--color', color)
+function change() {
+    var poem = poems[Math.floor(Math.random() * poems.length)];
+    var color = colors[Math.floor(Math.random() * colors.length)];
+    if (oldPoem == poem || oldColor == color) return change();
+    [oldPoem, oldColor] = [poem, color];
+
+    pEl.innerHTML = poem;
+    document.documentElement.style.setProperty('--color', color);
 }
 
 function search() {
@@ -85,3 +89,7 @@ for (const iterator of resultArray) {
     ele += `<a class="item" style="--color:${iterator.color}" title="${iterator.title}" onclick="top.location='${iterator.href}'">${iterator.content}</a>`
 }
 main.innerHTML = ele;
+
+document.querySelector('.slider').onclick = () => {
+    top.location = './edit.html';
+}
