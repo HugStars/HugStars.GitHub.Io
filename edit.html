@@ -92,7 +92,7 @@
 <body>
     <table>
         <tr>
-            <th colspan="1">Title&emsp;</th>
+            <th colspan="1">Title</th>
             <th><button class="save">保存</button></th>
         </tr>
     </table>
@@ -130,6 +130,10 @@
                         arr.push(iterator.value)
                     }
                     localStorage.setItem('navTitle', JSON.stringify(arr));
+                    let isBack = confirm('保存成功，是否返回主页？');
+                    if (isBack) {
+                        top.location = 'https://hugstars.tk';
+                    }
                     break;
                 default:
                     break;
