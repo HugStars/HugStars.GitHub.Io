@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    transition: all .2s;
+}
+
+table {
+    margin: 50px auto;
+    width: 90vmin;
+    border: 1px solid #7e1671;
+    border-collapse: collapse;
+}
+
+input, table {
+    font-size: 16px;
+}
+
+input {
+    padding: 0 2vmin;
+    width: calc(100% - 4vmin);
+    height: 30px;
+    outline: 0;
+    border: 0;
+    background: 0 0;
+    vertical-align: top;
+    line-height: 30px;
+}
+
+th {
+    height: 40px;
+    border-bottom: 1px solid rgba(126, 22, 113, .5);
+    font-size: 18px;
+}
+
+.hover:hover {
+    background: rgba(0, 0, 0, .13);
+}
+
+tr+tr {
+    border-top: 1px solid rgba(126, 22, 113, .5);
+}
+
+td+td, th+th {
+    border-left: 1px solid rgba(126, 22, 113, .5);
+    text-align: center;
+}
+
+button {
+    padding: 2px 5px;
+    border: 0;
+    border-radius: 5px;
+    background: 0;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.save {
+    color: #41cf7d;
+    font-size: 16px;
+}
+
+.del {
+    color: #ee3f4d;
+}
+
+.add {
+    height: 40px;
+    color: #41cf7d;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.back {
+    color: #ee3f4d;
+    cursor: pointer;
+    font-weight: 600;
+}

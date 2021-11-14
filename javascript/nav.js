@@ -13,6 +13,8 @@ var list = [
     { content: '&#xe6cf;', color: '#F94880', title: '网站收藏', href: 'https://fuun.fun' },
     { content: '&#xe6d6;', color: '#41AEF0', title: 'MikuTools', href: 'https://tools.miku.ac' },
     { content: '&#xe602;', color: '#FF767D', title: '设计师导航', href: 'http://www.mfchange.cn' },
+    { content: '&#xe849;', color: '#41B883', title: 'Vue3+Ts', href: 'https://24kcs.github.io/vue3_study' },
+    { content: '&#xe603;', color: "#FF0000", title: "剑灵", href: "https://bns.qq.com/web202011/event.shtml" }
 ];
 
 if (!localStorage.getItem('navItem')) {
@@ -92,4 +94,22 @@ main.innerHTML = ele;
 
 document.querySelector('.slider').onclick = () => {
     top.location = './edit.html';
+}
+
+
+
+document.querySelector('.editText').onclick = () => {
+    top.location = './editText.html'
+}
+
+document.querySelector('.editIcon').onclick = () => {
+    // top.location = './editIcon.html'
+    alert('开发中。。。')
+}
+
+document.querySelector('.reset').onclick = () => {
+    if (confirm('确认要重置文本和书签吗?')) {
+        localStorage.clear()
+        top.location = top.location;
+    }
 }

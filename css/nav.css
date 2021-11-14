@@ -10,7 +10,6 @@
 body {
     padding-top: 10vmax;
     user-select: none;
-    /* background: linear-gradient(to left, #999 50%, transparent 0) 0 / 1vmin 1px repeat-x, linear-gradient(to bottom, #999 50%, transparent 0) 50% / 1px 1vmin repeat-y; */
 }
 
 header {
@@ -36,6 +35,7 @@ input {
     border: 1px solid var(--color);
     border-radius: 10px 0 0 10px;
     background: 0 0;
+    color: var(--color);
     font-size: 20px;
     line-height: 40px;
     border-right-width: 0;
@@ -122,6 +122,8 @@ aside {
     top: calc(50% - 80px);
     left: 0;
     font-size: 0;
+    display: flex;
+    align-items: center;
 }
 
 .slider, aside {
@@ -129,7 +131,6 @@ aside {
 }
 
 .slider {
-    display: inline-block;
     margin: 0 5px;
     width: 1vmin;
     height: 65px;
@@ -142,11 +143,29 @@ aside {
 .control {
     display: none;
     width: 100px;
-    height: 63px;
-    border: 1px solid var(--color);
-    border-radius: 5px;
+    border-radius: 15px;
+    background: #fff;
+    color: var(--color);
+    vertical-align: top;
+    font-size: 16px;
+    box-shadow: 5px 5px 15px rgb(0 0 0 / 10%);
 }
 
 aside:hover .control {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+aside:hover .slider {
+    display: none;
+}
+
+.control p {
+    text-indent: 5px;
+    font-family: Icon;
+}
+
+.control p:hover {
+    text-decoration: underline;
 }
