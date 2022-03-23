@@ -14,7 +14,8 @@ var list = [
     { content: '&#xe6d6;', color: '#41AEF0', title: 'MikuTools', href: 'https://tools.miku.ac' },
     { content: '&#xe602;', color: '#FF767D', title: '设计师导航', href: 'http://www.mfchange.cn' },
     { content: '&#xe849;', color: '#41B883', title: 'Vue3+Ts', href: 'https://24kcs.github.io/vue3_study' },
-    { content: '&#xe603;', color: "#FF0000", title: "剑灵", href: "https://bns.qq.com/web202011/event.shtml" }
+    { content: '&#xe6d6;', color: '#000000', title: 'MDN|Web开发', href: 'https://developer.mozilla.org/zh-CN/docs/Web' },
+    { content: '&#xe6d6;', color: '#2ecc71', title: '前端笔记', href: 'https://jiusi.xyz' },
 ];
 
 if (!localStorage.getItem('navItem')) {
