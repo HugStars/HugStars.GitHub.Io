@@ -4,9 +4,27 @@
 	transition: all .2s;
 }
 
+html {
+	height: 100vh;
+	overflow: hidden;
+}
+
+#particles-js {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	pointer-events: none;
+	transition: all 0s;
+	z-index: -10000;
+}
+
 table {
 	margin: 50px auto;
 	width: 90vmin;
+	height: calc(100vh - 100px);
+	overflow: scroll;
 }
 
 input, table {
