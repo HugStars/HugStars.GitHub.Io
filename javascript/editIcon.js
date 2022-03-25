@@ -5,7 +5,7 @@ for (const iterator of navTitle) {
     tr.innerHTML = `<td><input type="text" value="${iterator}"></td><td><button class="del">删除</button></td>`;
     tr.className = 'hover';
     document.querySelector('table').append(tr);
-}
+} 
 var tr = document.createElement('tr');
 tr.innerHTML = `<td class="add">添加</td><td class="back">返回</td>`;
 document.querySelector('table').append(tr);
