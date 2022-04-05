@@ -4,34 +4,81 @@
 	transition: all .2s;
 }
 
-html {
-	height: 100vh;
+body {
 	overflow: hidden;
+	padding: 50px 0;
+	height: 100vh;
 }
 
 #particles-js {
 	position: absolute;
 	top: 0;
 	left: 0;
+	z-index: -10000;
 	width: 100vw;
 	height: 100vh;
-	pointer-events: none;
 	transition: all 0s;
-	z-index: -10000;
+	pointer-events: none;
 }
 
-table {
-	margin: 50px auto;
+main {
+	margin: auto;
 	width: 90vmin;
 	height: calc(100vh - 100px);
-	overflow: scroll;
 }
 
-input, table {
-	font-size: 16px;
+.main::-webkit-scrollbar {
+	width: 5px;
+}
+
+.main::-webkit-scrollbar-track-piece {
+	width: 5px;
+	background: #f2f2f2;
+}
+
+.main::-webkit-scrollbar-thumb {
+	width: 5px;
+	border-radius: 10px;
+	background: #41cf7d;
+}
+
+.item {
+	display: flex;
+	height: 50px;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 40px;
+}
+
+.main .item:hover .btn, .main .item:hover .ipt {
+	background: #f2f2f2 !important;
+}
+
+main>.item:last-of-type:hover .btn, main>.item:last-of-type:hover .ipt {
+	background: unset !important;
+}
+
+.main {
+	overflow-y: auto;
+	max-height: calc(100vh - 207px);
+}
+
+.ipt {
+	width: 80%;
+	text-align: center;
+}
+
+.btn, .ipt {
+	border-radius: 5px;
+}
+
+.btn {
+	width: 20%;
+	border-left: 2px solid #fff;
 }
 
 input {
+	margin-top: 10px;
 	padding: 0 2vmin;
 	width: calc(100% - 4vmin);
 	height: 30px;
@@ -39,27 +86,14 @@ input {
 	border: 0;
 	background: 0 0;
 	vertical-align: top;
+	font-size: 16px;
 	line-height: 30px;
 }
 
-th {
-	height: 40px;
-	font-size: 18px;
-}
-
-.hover:hover {
-	background: rgba(0, 0, 0, .05);
-	/* box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%); */
-}
-
-td+td, th+th {
-	text-align: center;
-}
-
 button {
+	padding: 2px 5px;
 	width: 100%;
 	height: 100%;
-	padding: 2px 5px;
 	border: 0;
 	border-radius: 5px;
 	background: 0;
@@ -67,9 +101,7 @@ button {
 	cursor: pointer;
 }
 
-.save:hover,
-.add:hover,
-.back:hover {
+.add:hover, .back:hover, .save:hover {
 	background: rgba(0, 0, 0, .05);
 }
 
@@ -83,15 +115,15 @@ button {
 }
 
 .add {
-	height: 40px;
 	color: #41cf7d;
 	text-align: center;
+}
+
+.add, .back {
 	font-weight: 600;
 	cursor: pointer;
 }
 
 .back {
 	color: #ee3f4d;
-	cursor: pointer;
-	font-weight: 600;
 }
