@@ -55,23 +55,30 @@ var colors = ['#ee3f4d', '#7e1671', '#2f90b9', '#41CF7D', '#fb8b05'];
 var oldColor = '';
 
 var searchArr = ["https://www.baidu.com/s?ie=UTF-8&wd=", "https://global.bing.com/search?q="]
+var sel = document.querySelector('.select')
 
 if (!localStorage.getItem('search')) {
 	localStorage.setItem('search', 0);
 }
+else {
+	if (localStorage.getItem('search') == 0) {
+		sel.innerHTML = '百度'
+	} else {
+		sel.innerHTML = '必应'
+	}
+}
 
-var sel = document.querySelector('.select')
 var pEl = document.querySelector('.title');
 var ipt = document.querySelector('input');
 var btn = document.querySelector('button');
 var main = document.querySelector('main');
 
-sel.addEventListener('click', function (e) {
-	if (e.target.innerHTML == '百度') {
-		e.target.innerHTML = '必应'
+sel.addEventListener('click', function () {
+	if (sel.innerHTML == '百度') {
+		sel.innerHTML = '必应'
 		localStorage.setItem('search', 1)
 	} else {
-		e.target.innerHTML = '百度'
+		sel.innerHTML = '百度'
 		localStorage.setItem('search', 0)
 	}
 })
