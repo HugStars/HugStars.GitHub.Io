@@ -1,48 +1,51 @@
 let navTitle = JSON.parse(localStorage.getItem('navTitle'));
 if (navTitle.length >= 20) navTitle = navTitle.splice(0, 20)
 let str = ``;
+let main = document.querySelector('.main')
+
 for (const iterator of navTitle) {
-	var tr = document.createElement('tr');
-	tr.innerHTML = `<td><input type="text" value="${iterator}"></td><td><button class="del">删除</button></td>`;
-	tr.className = 'hover';
-	document.querySelector('tbody').append(tr);
+	var div = document.createElement('div');
+	div.innerHTML = `<div class='ipt'><input type="text" value="${iterator}"></div><div class='btn'><button class="del">删除</button></div>`;
+	div.className = 'item';
+	main.append(div);
 }
-var tr = document.createElement('tr');
-tr.innerHTML = `<td class="add">添加</td><td class="back">返回</td>`;
-document.querySelector('tbody').append(tr);
 
-
-document.querySelector('table').addEventListener('click', e => {
+document.querySelector('main').addEventListener('click', e => {
 	switch (e.target.className) {
 		case 'add':
-			if (document.querySelectorAll('tr').length >= 22) {
+			if (document.querySelectorAll('input').length >= 20) {
 				return alert('最多添加20个')
 			}
-			var tr = document.createElement('tr');
-			tr.innerHTML = `<td><input type="text" value=""></td><td><button class="del">删除</button></td>`;
-			tr.className = 'hover';
-			document.querySelector('tbody').insertBefore(tr, document.querySelector('.add').parentNode)
+			var div = document.createElement('div');
+			div.innerHTML = `<div class='ipt'><input type="text" value=""></div><div class='btn'><button class="del">删除</button></div>`;
+			div.className = 'item';
+			main.append(div);
 			break;
 		case 'del':
-			document.querySelector('tbody').removeChild(e.target.parentNode.parentNode);
+			document.querySelector('.main').removeChild(e.target.parentNode.parentNode);
 			break;
 		case 'save':
 			var ipts = document.querySelectorAll('input');
-			if (ipts.length < 2) {
-				return alert('至少需要两条文本。')
-			}
-			var arr = [];
+			if (ipts.length < 2) return alert('至少需要两条文本。')
+			if (ipts.length >= 20) return alert('最多添加20条文本。')
+
+			var set = new Set();
 			for (const iterator of ipts) {
-				arr.push(iterator.value)
+				if (iterator.value === '') return alert('文本不能为空')
+				set.add(iterator.value)
 			}
-			localStorage.setItem('navTitle', JSON.stringify(arr));
-			let isBack = confirm('保存成功，是否返回主页？');
-			if (isBack) {
-				history.go(-1);
+			console.log(ipts.length, set.size)
+			if (ipts.length !== set.size) return alert('检测到重复文本，请移除。')
+
+
+			localStorage.setItem('navTitle', JSON.stringify([...set]));
+
+			if (confirm('保存成功，是否返回主页？')) {
+				history.back();
 			}
 			break;
 		case 'back':
-			history.go(-1);
+			history.back();
 		default:
 			break;
 	}
