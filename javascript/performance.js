@@ -1,5 +1,5 @@
 window.addEventListener('load', function () {
-	let { connectEnd, connectStart, domComplete, domContentLoadedEventEnd, domContentLoadedEventSta, domInteractive, domLoading, domainLookupEnd, domainLookupStart, fetchStart, loadEventEnd, loadEventStart, navigationStart, redirectEnd, redirectStart, requestStart, responseEnd, responseStart, secureConnectionStart, unloadEventEnd, unloadEventStart } = window.performance.timing;
+	let { connectEnd, connectStart, domContentLoadedEventEnd, domInteractive, domLoading, domainLookupEnd, domainLookupStart, fetchStart, loadEventStart, requestStart, responseEnd, responseStart } = window.performance.timing;
 	let style = 'color:green;font-weight:900';
 	console.log("%c DNS解析耗时:", style, domainLookupEnd - domainLookupStart);
 	console.log("%c TCP连接耗时:", style, connectEnd - connectStart);
