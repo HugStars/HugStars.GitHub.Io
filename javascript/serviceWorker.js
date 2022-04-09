@@ -6,9 +6,7 @@ self.addEventListener('install', function (event) {
 		caches.open(VERSION).then(function (cache) {
 			console.log('开始缓存')
 			return cache.addAll([
-				'',
 				'/',
-				'./',
 				'../index.html',
 				'../editText.html',
 				'../editIcon.html',
