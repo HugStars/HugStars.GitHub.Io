@@ -36,6 +36,13 @@
 	</aside>
 	<script src="./javascript/nav.js"></script>
 	<script src="./javascript/performance.js"></script>
+	<script>
+		// 基于 WebWorker 配合 CatchStorage 实现离线缓存
+
+		window.addEventListener('onload', function () {
+			navigator.serviceWorker.register('./sw-demo-cache.js');
+		})
+	</script>
 </body>
 
 </html>
