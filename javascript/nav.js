@@ -93,6 +93,10 @@ function change() {
 	document.documentElement.style.setProperty('--color', color);
 }
 
+document.querySelector('form').onsubmit = function () {
+	return search()
+}
+
 function search() {
 	var iptVal = ipt.value;
 	if (iptVal != '') location.href = searchArr[localStorage.getItem('search')] + iptVal;
