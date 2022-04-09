@@ -1,93 +1,194 @@
 * {
-    margin: 0;
-    padding: 0;
-    transition: all .2s;
+	margin: 0;
+	padding: 0;
+	transition: all .2s;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+	-ms-tap-highlight-color: transparent;
+	-moz-tap-highlight-color: transparent;
+	-o-tap-highlight-color: transparent;
+	/* outline: 1px solid #00000020; */
 }
 
-table {
-    margin: 50px auto;
-    width: 90vmin;
-    border: 1px solid #7e1671;
-    border-collapse: collapse;
+body {
+	padding: 50px;
+	height: 100vh;
+	width: 90vmin;
+	margin: auto;
+	overflow: hidden;
 }
 
-input, table {
-    font-size: 16px;
+.head {
+	display: flex;
+	height: 40px;
+	line-height: 40px;
+}
+
+.head div {
+	text-align: center;
+	font-weight: 600;
+	width: 20%;
+}
+
+.head div:nth-child(2), .main input:nth-child(2) {
+	width: 30%;
+}
+
+.head div:nth-child(4), .main input:nth-child(4) {
+	width: 10%;
+}
+
+.main {
+	overflow-y: auto;
+	margin: auto;
+	width: 100%;
+	height: calc(100% - 80px);
+
+}
+
+.main::-webkit-scrollbar {
+	width: 5px;
+}
+
+.main::-webkit-scrollbar-track-piece {
+	width: 5px;
+	background: #f2f2f2;
+}
+
+.main::-webkit-scrollbar-thumb {
+	width: 5px;
+	border-radius: 10px;
+	background: #41cf7d;
+}
+
+.main::-webkit-scrollbar-thumb:hover {
+	background: #fb8b05;
+}
+
+.main .item {
+	height: 40px;
+	line-height: 40px;
+	display: flex;
+	border-radius: 5px;
+}
+
+.item input:nth-of-type(3) {
+	font-family: Icon;
+	color: var(--color);
+}
+
+.item input, .item div {
+	width: 20%;
+	text-align: center;
 }
 
 input {
-    padding: 0 2vmin;
-    height: 30px;
-    outline: 0;
-    border: 0;
-    background: 0 0;
-    vertical-align: top;
-    line-height: 30px;
+	margin-top: 5px;
+	padding: 0 1vmin;
+	height: 30px;
+	outline: 0;
+	border: 0;
+	background: 0 0;
+	vertical-align: top;
+	font-size: 16px;
+	line-height: 30px;
 }
 
-input.name {
-    width: 11vw;
-    max-width: 50px;
-    min-width: 30px;
+input[type=button] {
+	cursor: pointer;
 }
 
-input.http {
-    width: 50vw;
-    max-width: 300px;
-    min-width: 200px;
+.foot {
+	height: 40px;
+	display: flex;
+	line-height: 40px;
+	text-align: center;
 }
 
-input.color {
-    width: 11vw;
-    max-width: 50px;
-    min-width: 30px;
+.foot div {
+	text-align: center;
+	border-radius: 5px;
+	cursor: pointer;
+	font-weight: 600;
 }
 
-th {
-    height: 40px;
-    border-bottom: 1px solid rgba(126, 22, 113, .5);
-    font-size: 18px;
-    text-align: center;
+.font {
+	padding: 10px 5px;
+	font-family: Icon;
+	position: absolute;
+	width: 200px;
+	top: 50vh;
+	left: 50vw;
+	transform: translateX(-50%) translateY(-50%);
+	background: white;
+	box-shadow: 5px 5px 15px rgb(0 0 0 / 10%);
+	border-radius: 15px;
+	display: none;
+	flex-wrap: wrap;
+	justify-content: space-around
 }
 
-td {
-    text-align: center;
+.font span {
+	padding: 5px;
+	font-size: 30px;
+	cursor: pointer;
+	user-select: none;
 }
 
-.hover:hover {
-    background: rgba(0, 0, 0, .13);
+.font span:last-child {
+	margin-right: auto;
 }
 
-tr+tr {
-    border-top: 1px solid rgba(126, 22, 113, .5);
-}
-
-td+td, th+th {
-    border-left: 1px solid rgba(126, 22, 113, .5);
-}
-
-button {
-    padding: 2px 5px;
-    border: 0;
-    border-radius: 5px;
-    background: 0;
-    font-weight: 600;
-    cursor: pointer;
-}
 
 .save {
-    color: #41cf7d;
-    font-size: 16px;
+	color: #41cf7d;
+	font-weight: 600;
+	cursor: pointer;
+	border-radius: 5px;
+	user-select: none;
 }
 
 .del {
-    color: #ee3f4d;
+	position: relative;
+	color: #ee3f4d;
+	font-weight: 600;
+	font-size: 14px;
+	cursor: pointer;
+	border-radius: 0 5px 5px 0;
+	border-left: 2px solid #ffffff;
+	user-select: none;
 }
 
 .add {
-    height: 40px;
-    color: #41cf7d;
-    text-align: center;
-    font-weight: 600;
-    cursor: pointer;
+	width: 80%;
+	color: #41cf7d;
+	user-select: none;
+}
+
+.back {
+	color: #ee3f4d;
+	user-select: none;
+	width: 20%;
+}
+
+.add:hover, .back:hover, .save:hover {
+	background: rgba(0, 0, 0, .05);
+}
+
+.item:hover {
+	background: rgba(0, 0, 0, .05);
+}
+
+
+@font-face {
+	font-family: Icon;
+	src: url(../font/nav.woff2);
+}
+
+@media screen and (max-width:600px) {
+	body {
+		width: 98vmin;
+		padding: 50px 10px;
+	}
+
 }
