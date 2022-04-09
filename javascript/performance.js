@@ -12,5 +12,8 @@ window.addEventListener('load', function () {
 	console.log("%c 首次可交互时间:", style, domInteractive - fetchStart);
 	console.log("%c DOM Ready时间:", style, domContentLoadedEventEnd - fetchStart);
 	console.log("%c 页面完全加载时间:", style, loadEventStart - fetchStart)
-	navigator.serviceWorker.register('./javascript/serviceWorker.js');
+
+	if (location.protocol != 'file:') {
+		navigator.serviceWorker.register('./javascript/serviceWorker.js');
+	}
 })
