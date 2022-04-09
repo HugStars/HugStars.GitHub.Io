@@ -24,7 +24,7 @@ main.addEventListener('click', function (e) {
 	switch (e.target.className) {
 		case 'content':
 			chooseIcon = e.target
-			font.style.display = 'flex'
+			icon.parentNode.parentNode.style.display = 'block'
 			break;
 		case 'del':
 			main.removeChild(e.target.parentNode);
@@ -51,12 +51,16 @@ main.addEventListener('change', function (e) {
 	}
 })
 
-let font = document.querySelector('.font')
+let icon = document.querySelector('.icon')
 
-font.addEventListener('click', function (e) {
-	console.log(e.target)
+icon.addEventListener('click', function (e) {
+	console.log(e.target.nodeName)
 	if (chooseIcon) {
 		chooseIcon.value = e.target.innerHTML
 	}
-	this.style.display = 'none'
+	this.parentNode.parentNode.style.display = 'none'
+})
+
+document.querySelector('.close').addEventListener('click', function () {
+	document.querySelector('.dialog').style.display = 'none'
 })
