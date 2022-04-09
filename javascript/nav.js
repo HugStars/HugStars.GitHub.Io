@@ -129,8 +129,8 @@ document.querySelector('.editText').onclick = () => {
 }
 
 document.querySelector('.editIcon').onclick = () => {
-	// top.location = './editIcon.html'
-	alert('开发中。。。')
+	top.location = './editIcon.html'
+	// alert('开发中。。。')
 }
 
 document.querySelector('.reset').onclick = () => {
