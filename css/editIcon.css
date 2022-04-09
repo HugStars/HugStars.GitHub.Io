@@ -30,7 +30,7 @@ body {
 }
 
 .head div:nth-child(2), .main input:nth-child(2) {
-	width: 30%;
+	width: 50%;
 }
 
 .head div:nth-child(4), .main input:nth-child(4) {
@@ -38,7 +38,7 @@ body {
 }
 
 .main {
-	overflow-y: auto;
+	overflow-y: overlay;
 	margin: auto;
 	width: 100%;
 	height: calc(100% - 80px);
@@ -100,6 +100,7 @@ input[type=button] {
 	display: flex;
 	height: 40px;
 	line-height: 40px;
+	border-top: 1px solid #e0e0e0;
 }
 
 .foot, .foot div {
@@ -138,9 +139,10 @@ input[type=button] {
 	transform: translateX(-50%) translateY(-50%);
 }
 
-.title {
+.font .title {
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: 10px;
 }
 
 .title .close {
@@ -213,4 +215,20 @@ input[type=button] {
 		padding: 50px 10px;
 		width: 98vmin;
 	}
+
+	.head div:nth-child(2), .main input:nth-child(2) {
+		width: 45%;
+	}
+
+
+	.head div:nth-child(3), .main input:nth-of-type(3) {
+		color: var(--color);
+		font-family: Icon;
+		width: 10%;
+	}
+
+	.head div:nth-child(5), .item div:nth-child(5) {
+		width: 15%;
+	}
+
 }
