@@ -1,45 +1,62 @@
-let navTitle = JSON.parse(localStorage.getItem('navTitle'));
-let str = ``;
-for (const iterator of navTitle) {
-    var tr = document.createElement('tr');
-    tr.innerHTML = `<td><input type="text" value="${iterator}"></td><td><button class="del">删除</button></td>`;
-    tr.className = 'hover';
-    document.querySelector('table').append(tr);
-} 
-var tr = document.createElement('tr');
-tr.innerHTML = `<td class="add">添加</td><td class="back">返回</td>`;
-document.querySelector('table').append(tr);
+let navItem = JSON.parse(localStorage.getItem('navItem'))
 
+console.log(navItem)
 
-document.querySelector('table').addEventListener('click', e => {
-    switch (e.target.className) {
-        case 'add':
-            var tr = document.createElement('tr');
-            tr.innerHTML = `<td><input type="text" value=""></td><td><button class="del">删除</button></td>`;
-            tr.className = 'hover';
-            document.querySelector('table').insertBefore(tr, document.querySelector('.add').parentNode)
-            break;
-        case 'del':
-            document.querySelector('table').removeChild(e.target.parentNode.parentNode);
-            break;
-        case 'save':
-            var ipts = document.querySelectorAll('input');
-            if (ipts.length < 2) {
-                return alert('至少需要两条文本。')
-            }
-            var arr = [];
-            for (const iterator of ipts) {
-                arr.push(iterator.value)
-            }
-            localStorage.setItem('navTitle', JSON.stringify(arr));
-            let isBack = confirm('保存成功，是否返回主页？');
-            if (isBack) {
-                history.go(-1);
-            }
-            break;
-        case 'back':
-            history.go(-1);
-        default:
-            break;
-    }
+let str = ''
+
+for (const iterator of navItem) {
+	str +=
+		`<div class="item">
+		<input class="title" type="text" value="${iterator.title}">
+		<input class="href" type="text" value="${iterator.href}">
+		<input class="content" type="button" value="${iterator.content}" style="--color:${iterator.color}">
+		<input class="color" type="color" value="${iterator.color}">
+		<div class="del">删除</div>
+	</div>`
+}
+
+let main = document.querySelector('.main')
+main.innerHTML = str
+
+let chooseIcon = null
+
+main.addEventListener('click', function (e) {
+	switch (e.target.className) {
+		case 'content':
+			chooseIcon = e.target
+			font.style.display = 'flex'
+			break;
+		case 'del':
+			main.removeChild(e.target.parentNode);
+			break;
+		default:
+			break;
+	}
+})
+main.addEventListener('change', function (e) {
+	target = e.target
+	switch (target.className) {
+		case 'title':
+
+			break;
+		case 'href':
+
+			break;
+
+		case 'color':
+			target.parentNode.querySelector('.content').style.setProperty(['--color'], target.value)
+			break;
+		default:
+			break;
+	}
+})
+
+let font = document.querySelector('.font')
+
+font.addEventListener('click', function (e) {
+	console.log(e.target)
+	if (chooseIcon) {
+		chooseIcon.value = e.target.innerHTML
+	}
+	this.style.display = 'none'
 })
