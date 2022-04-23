@@ -16,6 +16,7 @@ var list = [
 	{ content: '&#xe849;', color: '#41B883', title: 'Vue3+Ts', href: 'https://24kcs.github.io/vue3_study' },
 	{ content: '&#xe6d6;', color: '#000000', title: 'MDN|Web开发', href: 'https://developer.mozilla.org/zh-CN/docs/Web' },
 	{ content: '&#xe6d6;', color: '#2ecc71', title: '前端笔记', href: 'https://jiusi.xyz' },
+	{ content: '&#xe605;', color: '#8FBC8F', title: '工具', href: 'http://tool.jiusi.xyz/' },
 ];
 
 if (!localStorage.getItem('navItem')) {
