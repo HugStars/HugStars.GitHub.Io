@@ -88,7 +88,7 @@ sel.addEventListener('click', function () {
 function change() {
 	var poem = poems[Math.floor(Math.random() * poems.length)];
 	var color = colors[Math.floor(Math.random() * colors.length)];
-	if (oldPoem == poem || oldColor == color) return change();
+	if ((oldPoem == poem || oldColor == color) && poems.length > 1) return change();
 	[oldPoem, oldColor] = [poem, color];
 
 	pEl.innerHTML = poem;
