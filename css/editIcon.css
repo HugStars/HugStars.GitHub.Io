@@ -157,6 +157,8 @@ input[type=button] {
 }
 
 .icon span {
+	width: 10%;
+	text-align: center;
 	padding: 5px;
 	font-size: 30px;
 	cursor: pointer;
