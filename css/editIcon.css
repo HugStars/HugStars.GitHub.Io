@@ -207,7 +207,7 @@ input[type=button] {
 
 @font-face {
 	font-family: Icon;
-	src: url(../font/nav.woff2);
+	src: url(../font/icon.woff2);
 }
 
 @media screen and (max-width:600px) {
