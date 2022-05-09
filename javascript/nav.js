@@ -17,6 +17,10 @@ var list = [
 	{ content: '&#xe02c;', color: '#000000', title: 'MDN|Web开发', href: 'https://developer.mozilla.org/zh-CN/docs/Web' },
 	{ content: '&#xe00b;', color: '#2ecc71', title: '前端笔记', href: 'https://jiusi.xyz' },
 	{ content: '&#xe01b;', color: '#2ecc71', title: '工具', href: 'https://tool.jiusi.xyz' },
+	{ content: '&#xe00c;', color: '#0f51f2', title: '腾讯文档', href: 'https://docs.qq.com/desktop' },
+	{ content: '&#xe031;', color: '#ff463a', title: '今日热榜', href: 'https://tophub.today/' },
+	{ content: '&#xe021;', color: '#000000', title: '变量命名', href: 'http://rcode.rbtree.cn/' },
+
 ];
 
 if (!localStorage.getItem('navItem')) {
