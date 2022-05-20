@@ -125,18 +125,12 @@ for (const iterator of resultArray) {
 main.innerHTML = ele;
 
 
-
-document.querySelector('.slider').onclick = () => {
-	top.location = './edit.html';
-}
-
 document.querySelector('.editText').onclick = () => {
 	top.location = './editText.html'
 }
 
 document.querySelector('.editIcon').onclick = () => {
 	top.location = './editIcon.html'
-	// alert('开发中。。。')
 }
 
 document.querySelector('.reset').onclick = () => {
