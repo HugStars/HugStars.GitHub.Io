@@ -9,7 +9,7 @@ for (const iterator of navItem) {
 		`<div class="item">
 		<input class="title" type="text" value="${iterator.title}">
 		<input class="href" type="text" value="${iterator.href}">
-		<input class="content" type="button" value="${iterator.content}" style="--color:${iterator.color}">
+		<input class="content" type="button" value="&#xe${iterator.content};" style="--color:${iterator.color}">
 		<input class="color" type="color" value="${iterator.color}">
 		<div class="del">删除</div>
 	</div>`
@@ -45,7 +45,7 @@ document.querySelector('.save').addEventListener('click', function () {
 	for (const iterator of items) {
 		let values = iterator.querySelectorAll('input')
 		arr.push({
-			"content": values[2].value,
+			"content": values[2].value.charCodeAt().toString(16).slice(1),
 			"color": values[3].value,
 			"title": values[0].value,
 			"href": values[1].value

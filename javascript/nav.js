@@ -1,26 +1,27 @@
 var list = [
-	{ content: '&#xe001;', color: '#06A7FF', title: '百度网盘', href: 'https://pan.baidu.com' },
-	{ content: '&#xe000;', color: '#446DFF', title: '阿里云盘', href: 'https://www.aliyundrive.com/drive' },
-	{ content: '&#xe027;', color: '#7AC573', title: 'A H K', href: 'https://www.autoahk.com' },
-	{ content: '&#xe003;', color: '#4395FF', title: '翻译', href: 'https://fanyi.baidu.com' },
-	{ content: '&#xe004;', color: '#6543FF', title: '图标库', href: 'https://www.iconfont.cn' },
-	{ content: '&#xe005;', color: '#009A61', title: '在线工具', href: 'https://tool.lu' },
-	{ content: '&#xe006;', color: '#96B97D', title: '菜鸟教程', href: 'https://www.runoob.com' },
-	{ content: '&#xe007;', color: '#000000', title: 'GitHub', href: 'https://github.com/HugStars' },
-	{ content: '&#xe008;', color: '#1A8AFF', title: 'I7素材', href: 'https://www.17sucai.com' },
-	{ content: '&#xe009;', color: '#C71D23', title: 'Gitee', href: 'https://gitee.com/hugstars' },
-	{ content: '&#xe00a;', color: '#FB7299', title: 'bilibili', href: 'https://www.bilibili.com' },
-	{ content: '&#xe025;', color: '#F94880', title: '网站收藏', href: 'https://fuun.fun' },
-	{ content: '&#xe02c;', color: '#41AEF0', title: 'MikuTools', href: 'https://tools.miku.ac' },
-	{ content: '&#xe002;', color: '#FF767D', title: '设计师导航', href: 'http://www.mfchange.cn' },
-	{ content: '&#xe01a;', color: '#41B883', title: 'Vue3+Ts', href: 'https://24kcs.github.io/vue3_study' },
-	{ content: '&#xe02c;', color: '#000000', title: 'MDN|Web开发', href: 'https://developer.mozilla.org/zh-CN/docs/Web' },
-	{ content: '&#xe00b;', color: '#2ecc71', title: '前端笔记', href: 'https://jiusi.xyz' },
-	{ content: '&#xe01b;', color: '#2ecc71', title: '工具', href: 'https://tool.jiusi.xyz' },
-	{ content: '&#xe00c;', color: '#0f51f2', title: '腾讯文档', href: 'https://docs.qq.com/desktop' },
-	{ content: '&#xe031;', color: '#ff463a', title: '今日热榜', href: 'https://tophub.today/' },
-	{ content: '&#xe021;', color: '#000000', title: '变量命名', href: 'http://rcode.rbtree.cn/' },
-
+	{ content: '001', color: '#06A7FF', title: '百度网盘', href: 'https://pan.baidu.com' },
+	{ content: '000', color: '#446DFF', title: '阿里云盘', href: 'https://www.aliyundrive.com/drive' },
+	{ content: '027', color: '#7AC573', title: 'A H K', href: 'https://www.autoahk.com' },
+	{ content: '003', color: '#4395FF', title: '翻译', href: 'https://fanyi.baidu.com' },
+	{ content: '004', color: '#6543FF', title: '图标库', href: 'https://www.iconfont.cn' },
+	{ content: '005', color: '#009A61', title: '在线工具', href: 'https://tool.lu' },
+	{ content: '006', color: '#96B97D', title: '菜鸟教程', href: 'https://www.runoob.com' },
+	{ content: '007', color: '#000000', title: 'GitHub', href: 'https://github.com/HugStars' },
+	{ content: '008', color: '#1A8AFF', title: 'I7素材', href: 'https://www.17sucai.com' },
+	{ content: '009', color: '#C71D23', title: 'Gitee', href: 'https://gitee.com/hugstars' },
+	{ content: '00a', color: '#FB7299', title: 'bilibili', href: 'https://www.bilibili.com' },
+	{ content: '025', color: '#F94880', title: '网站收藏', href: 'https://fuun.fun' },
+	{ content: '02c', color: '#41AEF0', title: 'MikuTools', href: 'https://tools.miku.ac' },
+	{ content: '002', color: '#FF767D', title: '设计师导航', href: 'http://www.mfchange.cn' },
+	{ content: '01a', color: '#41B883', title: 'Vue3+Ts', href: 'https://24kcs.github.io/vue3_study' },
+	{ content: '02c', color: '#000000', title: 'MDN|Web开发', href: 'https://developer.mozilla.org/zh-CN/docs/Web' },
+	{ content: '00b', color: '#2ecc71', title: '前端笔记', href: 'https://jiusi.xyz' },
+	{ content: '01b', color: '#2ecc71', title: '工具', href: 'https://tool.jiusi.xyz' },
+	{ content: '00c', color: '#0f51f2', title: '腾讯文档', href: 'https://docs.qq.com/desktop' },
+	{ content: '031', color: '#ff463a', title: '今日热榜', href: 'https://tophub.today/' },
+	{ content: '021', color: '#000000', title: '变量命名', href: 'http://rcode.rbtree.cn/' },
+	{ content: '011', color: "#409eff", title: "ElementUI", href: "https://element.eleme.cn/#/zh-CN/component/installation" },
+	{ content: '018', color: "#5fbc21", title: "Naive UI", href: "https://www.naiveui.com/zh-CN/os-theme/components/button" },
 ];
 
 if (!localStorage.getItem('navItem')) {
@@ -120,7 +121,7 @@ var resultArray = list.sort((param1, param2) => {
 
 var ele = '';
 for (const iterator of resultArray) {
-	ele += `<a class="item" style="--color:${iterator.color}" title="${iterator.title}" onclick="top.location='${iterator.href}'">${iterator.content}</a>`
+	ele += `<a class="item" style="--color:${iterator.color}" title="${iterator.title}" onclick="top.location='${iterator.href}'">&#xe${iterator.content};</a>`
 }
 main.innerHTML = ele;
 
