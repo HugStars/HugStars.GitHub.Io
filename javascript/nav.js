@@ -22,6 +22,7 @@ var list = [
 	{ content: '021', color: '#000000', title: '变量命名', href: 'http://rcode.rbtree.cn/' },
 	{ content: '011', color: "#409eff", title: "ElementUI", href: "https://element.eleme.cn/#/zh-CN/component/installation" },
 	{ content: '018', color: "#5fbc21", title: "Naive UI", href: "https://www.naiveui.com/zh-CN/os-theme/components/button" },
+	{ content: "017", color: "#1e84ff", title: "掘金", href: "https://juejin.cn/" }
 ];
 
 if (!localStorage.getItem('navItem')) {
