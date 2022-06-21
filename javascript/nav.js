@@ -6,9 +6,9 @@ var list = [
 	{ content: '004', color: '#6543FF', title: '图标库', href: 'https://www.iconfont.cn' },
 	{ content: '005', color: '#009A61', title: '在线工具', href: 'https://tool.lu' },
 	{ content: '006', color: '#96B97D', title: '菜鸟教程', href: 'https://www.runoob.com' },
-	{ content: '007', color: '#000000', title: 'GitHub', href: 'https://github.com/HugStars' },
+	{ content: '007', color: '#000000', title: 'GitHub', href: 'https://github.com' },
 	{ content: '008', color: '#1A8AFF', title: 'I7素材', href: 'https://www.17sucai.com' },
-	{ content: '009', color: '#C71D23', title: 'Gitee', href: 'https://gitee.com/hugstars' },
+	{ content: '009', color: '#C71D23', title: 'Gitee', href: 'https://gitee.com' },
 	{ content: '00a', color: '#FB7299', title: 'bilibili', href: 'https://www.bilibili.com' },
 	{ content: '025', color: '#F94880', title: '网站收藏', href: 'https://fuun.fun' },
 	{ content: '02c', color: '#41AEF0', title: 'MikuTools', href: 'https://tools.miku.ac' },
@@ -49,6 +49,7 @@ var poems = [
 	'余生有幸识故人&emsp;可有春雪送江风',
 	'文章写尽太平事&emsp;不肯俯首见苍生',
 ];
+
 var oldPoem = ''
 
 
@@ -62,18 +63,28 @@ else {
 var colors = ['#ee3f4d', '#7e1671', '#2f90b9', '#41CF7D', '#fb8b05'];
 var oldColor = '';
 
-var searchArr = ["https://www.baidu.com/s?ie=UTF-8&wd=", "https://global.bing.com/search?q="]
+var searchEngine = {
+	0: {
+		href: "https://www.baidu.com/s?wd=",
+		name: "百度"
+	},
+	1: {
+		href: "https://global.bing.com/search?q=",
+		name: "必应"
+	},
+	2: {
+		href: "https://kaifa.baidu.com/searchPage?wd=",
+		name: "开发"
+	}
+}
+
 var sel = document.querySelector('.select')
 
 if (!localStorage.getItem('search')) {
 	localStorage.setItem('search', 0);
 }
 else {
-	if (localStorage.getItem('search') == 0) {
-		sel.innerHTML = '百度'
-	} else {
-		sel.innerHTML = '必应'
-	}
+	sel.innerHTML = searchEngine[localStorage.getItem('search')].name
 }
 
 var pEl = document.querySelector('.title');
@@ -82,13 +93,10 @@ var btn = document.querySelector('button');
 var main = document.querySelector('main');
 
 sel.addEventListener('click', function () {
-	if (sel.innerHTML == '百度') {
-		sel.innerHTML = '必应'
-		localStorage.setItem('search', 1)
-	} else {
-		sel.innerHTML = '百度'
-		localStorage.setItem('search', 0)
-	}
+	let num = localStorage.getItem('search') * 1 + 1
+	num = num > Object.keys(searchEngine).length - 1 ? 0 : num
+	sel.innerHTML = searchEngine[num].name
+	localStorage.setItem('search', num)
 })
 
 function change() {
@@ -106,13 +114,15 @@ document.querySelector('form').onsubmit = function () {
 }
 
 function search() {
-	var iptVal = ipt.value;
-	if (iptVal != '') location.href = searchArr[localStorage.getItem('search')] + iptVal;
+	var iptVal = encodeURI(ipt.value);
+	if (iptVal != '') location.href = searchEngine[localStorage.getItem('search')].href + iptVal;
 	return false;
 }
+
 btn.addEventListener('click', search);
 
 change();
+
 pEl.addEventListener('click', change);
 
 var resultArray = list.sort((param1, param2) => {
@@ -127,13 +137,9 @@ for (const iterator of resultArray) {
 main.innerHTML = ele;
 
 
-document.querySelector('.editText').onclick = () => {
-	top.location = './editText.html'
-}
+document.querySelector('.editText').onclick = () => top.location = './editText.html'
 
-document.querySelector('.editIcon').onclick = () => {
-	top.location = './editIcon.html'
-}
+document.querySelector('.editIcon').onclick = () => top.location = './editIcon.html'
 
 document.querySelector('.reset').onclick = () => {
 	if (confirm('确认要重置文本和书签吗?')) {
