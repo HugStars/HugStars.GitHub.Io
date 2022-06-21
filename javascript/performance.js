@@ -14,6 +14,6 @@ window.addEventListener('load', function () {
 	console.log("%c 页面完全加载时间:", style, loadEventStart - fetchStart)
 
 	if (location.protocol != 'file:') {
-		navigator.serviceWorker.register('./serviceWorker.js');
+		navigator.serviceWorker.register('./javascript/serviceWorker.js');
 	}
 })
