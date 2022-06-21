@@ -14,14 +14,14 @@ self.addEventListener('install', function (event) {
 				'../css/editIcon.css',
 				'../css/editText.css',
 				'../css/nav.css',
-				'../font/nav.woff2',
+				'../font/icon.woff2',
 				'../image/logo-48.png',
-				'./editIcon.js',
-				'./editText.js',
-				'./nav.js',
-				'./particles.min.js',
-				'./performance.js',
-				'./serviceWorker.js',
+				'../javascript/editIcon.js',
+				'../javascript/editText.js',
+				'../javascript/nav.js',
+				'../javascript/particles.min.js',
+				'../javascript/performance.js',
+				'../javascript/serviceWorker.js',
 			]);
 		})
 	);
